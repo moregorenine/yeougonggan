@@ -36,23 +36,19 @@ const LayoutNavbar = () => {
     return (
         <nav className={st.navbar}>
             <div className={st.navbar__logo}>
-                <i className="fab fa-diaspora"></i>
-                <a href="#">{' '}여우공간</a>
+                <img src="/favicon.png" className={st.navbar__logo__icon} />
+                <a href="#">여우공간</a>
             </div>
             <ul className={st.navbar__menu}>
-                <li className={`${st.navbar__menu__item} ${st.active}`} data-filter="center">센터플러스</li>
-                <li className={st.navbar__menu__item} data-filter="info">정보센터</li>
+                <li className={`${st.navbar__menu__item} ${st.active}`} data-filter="center">About</li>
+                <li className={st.navbar__menu__item} data-filter="info">Service</li>
                 <li className={st.navbar__menu__item} data-filter="edu">교육정보</li>
                 <li className={st.navbar__menu__item} data-filter="job">구인구직</li>
                 <li className={st.navbar__menu__item} data-filter="comunity">커뮤니티</li>
                 <li className={st.navbar__menu__item} data-filter="care">케어</li>
             </ul>
-            <div className="navbar__right"></div>
-            <div className={st.navbar__user}>
-                <i className="fas fa-user"/>
-            </div>
             <div className={st.navbar__toggle_btn}>
-                <i className="fas fa-bars"/>
+                <i className="fas fa-bars" />
             </div>
         </nav>
     )
