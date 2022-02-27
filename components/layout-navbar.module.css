@@ -18,7 +18,6 @@
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-white);
 }
 
 .navbar__logo__icon {
@@ -28,6 +27,7 @@
 }
 
 .navbar__logo__icon + a {
+    color: var(--color-white);
     text-decoration: none;
 }
 
