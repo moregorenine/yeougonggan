@@ -27,7 +27,7 @@
     --weight-regular: 400;
 
     /* Size */
-    --size-border-radius: 4px;
+    --size-border-radius: 10px;
 
     /* Annimation */
     --animation-duration: 300ms;
@@ -50,6 +50,15 @@ body {
     margin: 0;
     font-family: 'Nanum Gothic', sans-serif;
     cursor: default;
+    background-image: url("/images/page_bg1.jpg");
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #000;
 }
 
 * {

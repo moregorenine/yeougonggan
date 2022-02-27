@@ -3,9 +3,10 @@ import st from './layout-navbar.module.css';
 if (typeof window !== "undefined") {
 
     // navbar scroll시에 배경색 변경
-    const navbar = document.querySelector(`.${st.navbar}`);
-    const navbarHeight = navbar.getBoundingClientRect().height;
     document.addEventListener('scroll', () => {
+        const navbar = document.querySelector(`.${st.navbar}`);
+        const navbarHeight = navbar.getBoundingClientRect().height;
+        console.log(`${window.scrollY}, ${navbarHeight}`)
         if (window.scrollY > navbarHeight) {
             navbar.classList.add(st.navbar__dark)
         } else {
@@ -18,7 +19,7 @@ if (typeof window !== "undefined") {
     navbarMenu.addEventListener('click', (e) => {
         if (e.target.nodeName == 'LI') {
             const active = document.querySelector(`.${st.navbar__menu__item}.${st.active}`);
-            active.classList.remove(st.active);
+            active?.classList.remove(st.active);
             e.target.classList.add(st.active);
             navbarMenu.classList.toggle(st.open)
         }
@@ -36,11 +37,12 @@ const LayoutNavbar = () => {
     return (
         <nav className={st.navbar}>
             <div className={st.navbar__logo}>
-                <img src="/favicon.png" className={st.navbar__logo__icon} />
+                <img src="/favicon.png" className={st.navbar__logo__icon}/>
                 <a href="#">여우공간</a>
             </div>
             <ul className={st.navbar__menu}>
-                <li className={`${st.navbar__menu__item} ${st.active}`} data-filter="center">About</li>
+                {/* <li className={`${st.navbar__menu__item} ${st.active}`} data-filter="center">About</li> */}
+                <li className={st.navbar__menu__item} data-filter="center">About</li>
                 <li className={st.navbar__menu__item} data-filter="info">Service</li>
                 <li className={st.navbar__menu__item} data-filter="edu">교육정보</li>
                 <li className={st.navbar__menu__item} data-filter="job">구인구직</li>
@@ -48,7 +50,7 @@ const LayoutNavbar = () => {
                 <li className={st.navbar__menu__item} data-filter="care">케어</li>
             </ul>
             <div className={st.navbar__toggle_btn}>
-                <i className="fas fa-bars" />
+                <i className="fas fa-bars"/>
             </div>
         </nav>
     )
