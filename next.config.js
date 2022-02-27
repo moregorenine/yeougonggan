@@ -2,7 +2,6 @@
 
 const nextConfig = {
     reactStrictMode: true,
-    basePath: '/jiyul',
 }
 
 module.exports = nextConfig
