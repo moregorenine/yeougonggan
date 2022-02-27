@@ -1,0 +1,6 @@
+.home {
+    text-align: center;
+    background-color: var(--color-blue);
+    height: 500px;
+    padding-top: 100px;
+}

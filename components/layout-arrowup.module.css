@@ -1,0 +1,31 @@
+.arrow_up {
+    position: fixed;
+    font-size: var(--font-regular);
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    bottom: 30px;
+    padding: 5px;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.arrow_up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*For below 768px screen width*/
+@media screen and (max-width: 768px) {
+    .arrow_up {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+}
