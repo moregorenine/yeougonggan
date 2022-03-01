@@ -12,37 +12,37 @@ import "swiper/css/pagination";
 import {Mousewheel, Pagination} from "swiper";
 
 export default function Home() {
-    if (typeof window !== "undefined") {
-        (function () {
-            window.addEventListener("resize", resizeThrottler, false);
-
-            var resizeTimeout;
-
-            function resizeThrottler() {
-                // ignore resize events as long as an actualResizeHandler execution is in the queue
-                if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function () {
-                        resizeTimeout = null;
-                        actualResizeHandler();
-
-                        // The actualResizeHandler will execute at a rate of 15fps
-                    }, 66);
-                }
-            }
-
-            function actualResizeHandler() {
-                // handle the resize event
-                if (window.innerWidth < 768) {
-                    // document.querySelector('#homeVideo').src="/videos/home.mp4";
-                }
-            }
-
-        }());
-
-        if (window.innerWidth < 768) {
-            // document.querySelector('#homeVideo').src="/videos/home.mp4";
-        }
-    }
+    // if (typeof window !== "undefined") {
+    //     (function () {
+    //         window.addEventListener("resize", resizeThrottler, false);
+    //
+    //         var resizeTimeout;
+    //
+    //         function resizeThrottler() {
+    //             // ignore resize events as long as an actualResizeHandler execution is in the queue
+    //             if (!resizeTimeout) {
+    //                 resizeTimeout = setTimeout(function () {
+    //                     resizeTimeout = null;
+    //                     actualResizeHandler();
+    //
+    //                     // The actualResizeHandler will execute at a rate of 15fps
+    //                 }, 66);
+    //             }
+    //         }
+    //
+    //         function actualResizeHandler() {
+    //             // handle the resize event
+    //             if (window.innerWidth < 768) {
+    //                 // document.querySelector('#homeVideo').src="/videos/home.mp4";
+    //             }
+    //         }
+    //
+    //     }());
+    //
+    //     if (window.innerWidth < 768) {
+    //         // document.querySelector('#homeVideo').src="/videos/home.mp4";
+    //     }
+    // }
     return (
         <LayoutIndex>
             <div className={css.main}>
@@ -60,7 +60,7 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay={true} loop={true} muted={false} type={"vidoe/mp4"}/>
+                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay={true} loop={true} muted={true}/>
                             {/*<video id={"homeVideo"} src="/videos/home.mp4" autoPlay/>*/}
                         </section>
                     </SwiperSlide>
