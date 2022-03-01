@@ -34,11 +34,13 @@ export default function Home() {
                     E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
                 </p>
             </section>
-            <section className={css.contact}>
-                <p>
-                    서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층
-                    16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.
-                </p>
+            <section className={css.about}>
+                <br/><br/>
+                <h1>hello world</h1>
+                <h2>hello world</h2>
+                <h3>hello world</h3>
+                <p>hello world</p>
+                <br/>
             </section>
         </LayoutIndex>
     )
