@@ -9,9 +9,9 @@ const LayoutIndex = ({children}) => {
             <LayoutHead/>
             <LayoutNavbar/>
             <Script src="https://kit.fontawesome.com/588bc570f8.js" crossOrigin="anonymous" strategy={'lazyOnload'}/>
-            <main>
+            {/*<main>*/}
                 {children}
-            </main>
+            {/*</main>*/}
             <LayoutArrowup/>
         </>
     )

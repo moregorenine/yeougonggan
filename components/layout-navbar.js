@@ -3,16 +3,15 @@ import st from './layout-navbar.module.css';
 if (typeof window !== "undefined") {
 
     // navbar scroll시에 배경색 변경
-    document.addEventListener('scroll', () => {
-        const navbar = document.querySelector(`.${st.navbar}`);
-        const navbarHeight = navbar.getBoundingClientRect().height;
-        console.log(`${window.scrollY}, ${navbarHeight}`)
-        if (window.scrollY > navbarHeight) {
-            navbar.classList.add(st.navbar__dark)
-        } else {
-            navbar.classList.remove(st.navbar__dark)
-        }
-    });
+    // document.addEventListener('scroll', () => {
+    //     const navbar = document.querySelector(`.${st.navbar}`);
+    //     const navbarHeight = navbar.getBoundingClientRect().height;
+    //     if (window.scrollY > navbarHeight) {
+    //         navbar.classList.add(st.navbar__dark)
+    //     } else {
+    //         navbar.classList.remove(st.navbar__dark)
+    //     }
+    // });
 
     // menu 클릭시 activate
     const navbarMenu = document.querySelector(`.${st.navbar__menu}`);
@@ -42,12 +41,12 @@ const LayoutNavbar = () => {
             </div>
             <ul className={st.navbar__menu}>
                 {/* <li className={`${st.navbar__menu__item} ${st.active}`} data-filter="center">About</li> */}
-                <li className={st.navbar__menu__item} data-filter="center">About</li>
-                <li className={st.navbar__menu__item} data-filter="info">Service</li>
-                <li className={st.navbar__menu__item} data-filter="edu">교육정보</li>
-                <li className={st.navbar__menu__item} data-filter="job">구인구직</li>
-                <li className={st.navbar__menu__item} data-filter="comunity">커뮤니티</li>
-                <li className={st.navbar__menu__item} data-filter="care">케어</li>
+                <li className={st.navbar__menu__item} data-filter="about">About</li>
+                <li className={st.navbar__menu__item} data-filter="service">Service</li>
+                <li className={st.navbar__menu__item} data-filter="contact">Contact</li>
+                {/*<li className={st.navbar__menu__item} data-filter="job">구인구직</li>*/}
+                {/*<li className={st.navbar__menu__item} data-filter="comunity">커뮤니티</li>*/}
+                {/*<li className={st.navbar__menu__item} data-filter="care">케어</li>*/}
             </ul>
             <div className={st.navbar__toggle_btn}>
                 <i className="fas fa-bars"/>
