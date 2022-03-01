@@ -1,6 +1,6 @@
 import LayoutIndex from "../components/layout-index";
 import css from "./index.module.css"
-import React, {useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 // Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -12,36 +12,76 @@ import "swiper/css/pagination";
 import {Mousewheel, Pagination} from "swiper";
 
 export default function Home() {
-    // if (typeof window !== "undefined") {
-    //     (function () {
-    //         window.addEventListener("resize", resizeThrottler, false);
-    //
-    //         var resizeTimeout;
-    //
-    //         function resizeThrottler() {
-    //             // ignore resize events as long as an actualResizeHandler execution is in the queue
-    //             if (!resizeTimeout) {
-    //                 resizeTimeout = setTimeout(function () {
-    //                     resizeTimeout = null;
-    //                     actualResizeHandler();
-    //
-    //                     // The actualResizeHandler will execute at a rate of 15fps
-    //                 }, 66);
-    //             }
-    //         }
-    //
-    //         function actualResizeHandler() {
-    //             // handle the resize event
-    //             if (window.innerWidth < 768) {
-    //                 // document.querySelector('#homeVideo').src="/videos/home.mp4";
-    //             }
-    //         }
-    //
-    //     }());
-    //
-    //     if (window.innerWidth < 768) {
-    //         // document.querySelector('#homeVideo').src="/videos/home.mp4";
+    // const size = useWindowSize();
+    // console.log(size)
+    // const [windowSize, setWindowSize] = useState({
+    //     width: undefined,
+    //     height: undefined,
+    // });
+    // if(size) {
+    //     if (size.width > 768) {
+    //         // alert('bigger 768')
+    //         useEffect(() => setVideoUrl('videos/home.mp4'), [])
+    //         // document.querySelector('source').src = "videos/home.mp4";
+    //     } else {
+    //         // alert('smaller 768')
+    //         // alert(document.querySelector('source').src)
+    //         useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
+    //         // document.querySelector('source').src = "/videos/home_mobile.mp4";
     //     }
+    // }
+
+
+    // if (typeof window !== "undefined") {
+
+        // (function () {
+        //     window.addEventListener("resize", resizeThrottler, false);
+        //
+        //     var resizeTimeout;
+        //
+        //     function resizeThrottler() {
+        //         // ignore resize events as long as an actualResizeHandler execution is in the queue
+        //         if (!resizeTimeout) {
+        //             resizeTimeout = setTimeout(function () {
+        //                 resizeTimeout = null;
+        //                 actualResizeHandler();
+        //
+        //                 // The actualResizeHandler will execute at a rate of 15fps
+        //             }, 66);
+        //         }
+        //     }
+        //
+        //     function actualResizeHandler() {
+        //         // handle the resize event
+        //         if (window.innerWidth > 768) {
+        //             useEffect(() => setVideoUrl('videos/home.mp4'), [])
+        //         } else {
+        //             useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
+        //         }
+        //     }
+        //
+        // }());
+
+
+        // // inside component, before return statement
+        // const [height, setHeight] = useState(null)
+        // const [width, setWidth] = useState(null)
+        // useEffect(() => setHeight(document.children[0].clientHeight), [
+        //     document.children[0].clientHeight
+        // ])
+        // useEffect(() => setWidth(document.children[0].clientWidth), [
+        //     document.children[0].clientWidth
+        // ])
+        //
+        // if (width > 768) {
+        //     alert(width)
+        //     useEffect(() => setVideoUrl('videos/home.mp4'), [])
+        //     // document.querySelector('source').src = "videos/home.mp4";
+        // } else {
+        //     useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
+        //     // document.querySelector('source').src = "videos/home_mobile.mp4";
+        // }
+
     // }
     return (
         <LayoutIndex>
@@ -60,8 +100,14 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay={true} loop={true} muted={true}/>
-                            {/*<video id={"homeVideo"} src="/videos/home.mp4" autoPlay/>*/}
+                            <video autoPlay loop muted className={`${css.home__video} ${css.width__large}`}>
+                                <source  src="/videos/home.mp4" type='video/mp4'/>
+                                {/*<source className={css.width__small} src="/videos/home_mobile.mp4" type='video/mp4'/>*/}
+                            </video>
+                            <video autoPlay loop muted className={`${css.home__video} ${css.width__small}`}>
+                                {/*<source className={css.width__large} src="/videos/home.mp4" type='video/mp4'/>*/}
+                                <source src="/videos/home_mobile.mp4" type='video/mp4'/>
+                            </video>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>

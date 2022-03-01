@@ -20,7 +20,6 @@ if (typeof window !== "undefined") {
         });
     });
 
-
 }
 
 const LayoutArrowup = () => {

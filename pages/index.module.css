@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-.home video {
+.home__video {
     /*opacity: 0.8;*/
     /*width: 100%;*/
     /*max-height: 100%;*/
@@ -22,6 +22,14 @@
     /*height: auto;*/
     /*transform: translateX(-50%) translateY(-50%);*/
     /*object-fit: contain;*/
+}
+
+.width__large {
+    display: block;
+}
+
+.width__small {
+    display: none;
 }
 
 .about {
@@ -62,5 +70,11 @@
 
 /*For below 768px screen width*/
 @media screen and (max-width: 768px) {
-    /*Typography*/
+    .width__large {
+        display: none;
+    }
+
+    .width__small {
+        display: block;
+    }
 }
