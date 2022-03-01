@@ -33,14 +33,14 @@ export default function Home() {
             function actualResizeHandler() {
                 // handle the resize event
                 if (window.innerWidth < 768) {
-                    document.querySelector('#homeVideo').src="/videos/home.mp4";
+                    // document.querySelector('#homeVideo').src="/videos/home.mp4";
                 }
             }
 
         }());
 
         if (window.innerWidth < 768) {
-            document.querySelector('#homeVideo').src="/videos/home.mp4";
+            // document.querySelector('#homeVideo').src="/videos/home.mp4";
         }
     }
     return (
@@ -60,7 +60,8 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay loop muted/>
+                            {/*<video id={"homeVideo"} src="/videos/home.mp4" autoPlay loop muted/>*/}
+                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay/>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
