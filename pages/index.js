@@ -60,7 +60,7 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay loop muted/>
+                            <video id={"homeVideo"} src="/videos/home.mp4" autoPlay={true} loop={true} muted={false} type={"vidoe/mp4"}/>
                             {/*<video id={"homeVideo"} src="/videos/home.mp4" autoPlay/>*/}
                         </section>
                     </SwiperSlide>
