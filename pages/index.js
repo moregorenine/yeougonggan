@@ -150,6 +150,70 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    START-UP BUSINESS
+                                </h2>
+                                <p>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
+                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
+                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
+                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                </p>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    RECOVERY PROJECT
+                                </h2>
+                                <p>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
+                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
+                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
+                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                </p>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    BUSINESS PERFORMANCE
+                                </h2>
+                                <p>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
+                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
+                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
+                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                </p>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    NEW BUSINESS
+                                </h2>
+                                <p>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
+                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
+                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
+                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                </p>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <section className={css.contact}>
                             <div className={css.contact__content}>
                                 <p>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층
