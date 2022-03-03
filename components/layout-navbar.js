@@ -74,19 +74,6 @@ const LayoutNavbar = () => {
                 </ul>
             </div>
             <style jsx>{`
-              //#navbar .logo {
-              //  z-index: 20;
-              //  left: 45px;
-              //  top: 30px;
-              //  position: absolute;
-              //  display: inline-block;
-              //  width: 100px;
-              //  height: 55px;
-              //  background: url("/favicon.png") left center no-repeat;
-              //  background-size: contain;
-              //  -webkit-transition: all .5s ease-out;
-              //  transition: all .5s ease-out;
-              //}
               .navbar__logo {
                 font-size: var(--font-medium);
                 font-weight: var(--weight-semi-bold);

@@ -32,57 +32,80 @@ export default function Home() {
     // }
 
 
-    // if (typeof window !== "undefined") {
-
-        // (function () {
-        //     window.addEventListener("resize", resizeThrottler, false);
-        //
-        //     var resizeTimeout;
-        //
-        //     function resizeThrottler() {
-        //         // ignore resize events as long as an actualResizeHandler execution is in the queue
-        //         if (!resizeTimeout) {
-        //             resizeTimeout = setTimeout(function () {
-        //                 resizeTimeout = null;
-        //                 actualResizeHandler();
-        //
-        //                 // The actualResizeHandler will execute at a rate of 15fps
-        //             }, 66);
-        //         }
-        //     }
-        //
-        //     function actualResizeHandler() {
-        //         // handle the resize event
-        //         if (window.innerWidth > 768) {
-        //             useEffect(() => setVideoUrl('videos/home.mp4'), [])
-        //         } else {
-        //             useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
-        //         }
-        //     }
-        //
-        // }());
+    console.log(`index.js`)
+    const handleOnIndexChanged = (activeIndex) => {
+        console.log(activeIndex)
+        console.log(document.querySelector('#navbar'));
+        document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
+        switch (activeIndex) {
+            case 1:
+                document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
+                break
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
+                break
+            case 7:
+                document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
+                break
 
 
-        // // inside component, before return statement
-        // const [height, setHeight] = useState(null)
-        // const [width, setWidth] = useState(null)
-        // useEffect(() => setHeight(document.children[0].clientHeight), [
-        //     document.children[0].clientHeight
-        // ])
-        // useEffect(() => setWidth(document.children[0].clientWidth), [
-        //     document.children[0].clientWidth
-        // ])
-        //
-        // if (width > 768) {
-        //     alert(width)
-        //     useEffect(() => setVideoUrl('videos/home.mp4'), [])
-        //     // document.querySelector('source').src = "videos/home.mp4";
-        // } else {
-        //     useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
-        //     // document.querySelector('source').src = "videos/home_mobile.mp4";
-        // }
+        }
+        // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
+    };
+    if (typeof window !== "undefined") {
+    // (function () {
+    //     window.addEventListener("resize", resizeThrottler, false);
+    //
+    //     var resizeTimeout;
+    //
+    //     function resizeThrottler() {
+    //         // ignore resize events as long as an actualResizeHandler execution is in the queue
+    //         if (!resizeTimeout) {
+    //             resizeTimeout = setTimeout(function () {
+    //                 resizeTimeout = null;
+    //                 actualResizeHandler();
+    //
+    //                 // The actualResizeHandler will execute at a rate of 15fps
+    //             }, 66);
+    //         }
+    //     }
+    //
+    //     function actualResizeHandler() {
+    //         // handle the resize event
+    //         if (window.innerWidth > 768) {
+    //             useEffect(() => setVideoUrl('videos/home.mp4'), [])
+    //         } else {
+    //             useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
+    //         }
+    //     }
+    //
+    // }());
 
+
+    // // inside component, before return statement
+    // const [height, setHeight] = useState(null)
+    // const [width, setWidth] = useState(null)
+    // useEffect(() => setHeight(document.children[0].clientHeight), [
+    //     document.children[0].clientHeight
+    // ])
+    // useEffect(() => setWidth(document.children[0].clientWidth), [
+    //     document.children[0].clientWidth
+    // ])
+    //
+    // if (width > 768) {
+    //     alert(width)
+    //     useEffect(() => setVideoUrl('videos/home.mp4'), [])
+    //     // document.querySelector('source').src = "videos/home.mp4";
+    // } else {
+    //     useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
+    //     // document.querySelector('source').src = "videos/home_mobile.mp4";
     // }
+
+    }
     return (
         <LayoutIndex>
             <div className={css.main}>
@@ -97,11 +120,12 @@ export default function Home() {
                     }}
                     modules={[Mousewheel, Pagination]}
                     className="mySwiper"
+                    onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
                 >
                     <SwiperSlide>
                         <section className={css.home}>
                             <video autoPlay loop muted className={`${css.home__video} ${css.width__large}`}>
-                                <source  src="/videos/home.mp4" type='video/mp4'/>
+                                <source src="/videos/home.mp4" type='video/mp4'/>
                                 {/*<source className={css.width__small} src="/videos/home_mobile.mp4" type='video/mp4'/>*/}
                             </video>
                             <video autoPlay loop muted className={`${css.home__video} ${css.width__small}`}>
@@ -111,7 +135,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.about}>
+                        <section className={`${css.about}`}>
                             {/*<div className={css.breadcrumb}>*/}
                             {/*    <p>About</p>*/}
                             {/*</div>*/}
