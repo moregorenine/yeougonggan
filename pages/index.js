@@ -31,24 +31,20 @@ export default function Home() {
     //     }
     // }
 
-
-    console.log(`index.js`)
     const handleOnIndexChanged = (activeIndex) => {
-        console.log(activeIndex)
-        console.log(document.querySelector('#navbar'));
         document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
         switch (activeIndex) {
-            case 1:
+            case 1: //ABOUT
                 document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
                 break
-            case 2:
+            case 2: //SEVICE
             case 3:
             case 4:
             case 5:
             case 6:
                 document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
                 break
-            case 7:
+            case 7: //CONTACT
                 document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
                 break
 
@@ -56,7 +52,8 @@ export default function Home() {
         }
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
-    if (typeof window !== "undefined") {
+
+    // if (typeof window !== "undefined") {
     // (function () {
     //     window.addEventListener("resize", resizeThrottler, false);
     //
@@ -105,7 +102,7 @@ export default function Home() {
     //     // document.querySelector('source').src = "videos/home_mobile.mp4";
     // }
 
-    }
+    // }
     return (
         <LayoutIndex>
             <div className={css.main}>
