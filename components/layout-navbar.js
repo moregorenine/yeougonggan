@@ -1,39 +1,23 @@
 // import st from './layout-navbar.module.css';
 
-if (typeof window !== "undefined") {
-
-    // navbar scroll시에 배경색 변경
-    // document.addEventListener('scroll', () => {
-    //     const navbar = document.querySelector(`.${st.navbar}`);
-    //     const navbarHeight = navbar.getBoundingClientRect().height;
-    //     if (window.scrollY > navbarHeight) {
-    //         navbar.classList.add(st.navbar__dark)
-    //     } else {
-    //         navbar.classList.remove(st.navbar__dark)
-    //     }
-    // });
-
-    // // menu 클릭시 activate
-    // const navbarMenu = document.querySelector(`.menu`);
-    // console.log('li click')
-    // navbarMenu.addEventListener('click', (e) => {
-    //     if (e.target.nodeName == 'LI') {
-    //         // const active = document.querySelector(`.${st.navbar__menu__item}.${st.active}`);
-    //         // active?.classList.remove(st.active);
-    //         // e.target.classList.add(st.active);
-    //         // navbarMenu.classList.toggle(st.open)
-    //     }
-    // })
-    //
-    // // toggle 클릭시 for small screen
-    // const navbarToggleBtn = document.querySelector(`.${st.navbar__toggle_btn}`);
-    // navbarToggleBtn.addEventListener('click', () => {
-    //     navbarMenu.classList.toggle(st.open)
-    // });
-}
-
 const LayoutNavbar = () => {
+    // let cntLoad = 0;
+    // if (typeof window !== "undefined") {
+    //     document.querySelector('#navbar .icon').addEventListener('click', () => {
+    //         console.log(++cntLoad)
+    //         if (document.querySelector('#navbar') !== undefined) {
+    //             document.querySelector('#navbar').classList.toggle("active")
+    //         }
+    //     });
+    // }
+
+    const handleToggle = () => {
+        document.querySelector('#navbar').classList.toggle("active")
+    };
     const handleClick = (nthChild) => {
+        if (document.querySelector('#navbar').classList.contains("active")) {
+            document.querySelector('#navbar').classList.toggle("active")
+        }
         document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
     return (
@@ -46,7 +30,7 @@ const LayoutNavbar = () => {
             {/*    <div className="logo">여우공간*/}
             {/*    </div>*/}
             {/*</a>*/}
-            <div className="icon">
+            <div className="icon" onClick={() => handleToggle()}>
                 <div>
                     <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
                 </div>
@@ -128,7 +112,7 @@ const LayoutNavbar = () => {
                 backdrop-filter: blur(10px);
                 height: 100%;
                 background: rgba(0, 0, 0, 0.85);
-                border-top: 10px solid #8eb5ff;
+                //border-top: 10px solid #8eb5ff;
               }
 
               #navbar .navigation {
@@ -138,7 +122,6 @@ const LayoutNavbar = () => {
               }
 
               #navbar.active .navigation {
-
               }
 
               #navbar ul {
@@ -146,7 +129,6 @@ const LayoutNavbar = () => {
               }
 
               #navbar ul li {
-
                 margin-left: 60px;
                 position: relative;
               }
@@ -203,7 +185,6 @@ const LayoutNavbar = () => {
               }
 
               #navbar ul li:hover ul li {
-
               }
 
               #navbar div > ul > li > a {
@@ -343,6 +324,169 @@ const LayoutNavbar = () => {
 
               #navbar.active .icon > div {
                 transform: rotate(180deg);
+              }
+
+              @media (max-width: 768px) {
+                .navbar__logo {
+                  left: 15px;
+                  top: 22px;
+                }
+
+                #navbar {
+                  top: 0px;
+                  right: 0px;
+                  height: 80px;
+                  width: 100%;
+                  overflow: hidden;
+                  background: rgba(0, 0, 0, 0);
+                }
+
+                #navbar .icon {
+                  display: block;
+                }
+
+                #navbar .icon > div {
+                  opacity: 1;
+                }
+
+                #navbar .logo {
+                  left: 20px;
+                  top: 15px;
+                  width: 75px;
+                }
+
+                #navbar .one_line {
+                  z-index: 21;
+                  position: fixed;
+                  left: 0px;
+                  top: 93px;
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 0px 20px;
+                  height: 1px;
+                }
+
+                #navbar .one_line > div {
+                  width: 0%;
+                  height: 1px;
+                  background: rgba(255, 255, 255, 0.15);
+                  -webkit-transition: all .7s ease-out;
+                  transition: all .7s ease-out;
+                }
+
+                #navbar.active .one_line > div {
+                  width: 100%;
+                }
+
+                #navbar ul {
+                  -webkit-transition: all .7s ease-out;
+                  transition: all .7s ease-out;
+                  opacity: 0;
+                }
+
+                #navbar.active ul {
+                  opacity: 1;
+                }
+
+                #navbar.active ul li ul {
+                  opacity: 1;
+                }
+                
+                #navbar .navigation {
+                  width: 100%;
+                  margin: 0 auto;
+                  position: relative;
+                  top: 100px;
+                }
+
+                #navbar.active .navigation {
+                  display: block;
+                }
+
+                #navbar .navigation ul.lang {
+                  position: absolute;
+                  right: 30px;
+                  margin-top: 5px;
+                }
+
+                #navbar .navigation ul.lang li a {
+                  font-size: 16px;
+                }
+
+                #navbar .navigation ul.menu li {
+                  display: block;
+                  margin-left: 40px;
+                }
+
+                #navbar .navigation ul.menu li a {
+                  display: inline-block;
+                  font-size: 45px;
+                  padding-bottom: 0px;
+                  line-height: 45px;
+                  font-weight: 600;
+                  letter-spacing: 0em;
+                }
+
+                #navbar .navigation ul.menu li ul {
+                  padding: 0px;
+                  top: 0;
+                  position: relative;
+                  display: block;
+                  background: transparent;
+                  left: 0px;
+                  margin-left: 0px;
+                  text-align: left;
+                }
+
+                #navbar .navigation ul.menu li ul li {
+                  height: 25px;
+                  border-left: 1px solid rgba(255, 255, 255, 0.2);
+                  margin: 0px;
+                  padding: 0px 20px;
+                  width: auto;
+                  text-align: left;
+                  display: inline-block;
+                  margin-bottom: 10px;
+                }
+
+                //#navbar .navigation ul.menu li ul li:first-child {
+                //  margin: 0px;
+                //  padding-left: 0px;
+                //  border: 0px;
+                //}
+
+                #navbar .navigation ul.menu li ul li a {
+                  line-height: 25px;
+                  display: inline-block;
+                  font-size: 16px;
+                  letter-spacing: 0.05em;
+                  text-align: left;
+                  color: rgba(255, 255, 255, 0.5);
+                  padding: 0;
+                }
+
+                #navbar .navigation ul.menu li.active ul li.active a {
+                  color: #8eb5ff;
+                }
+
+                .swiper-container.right_bar > .swiper-pagination > .swiper-pagination-bullet-active {
+                  width: 23px;
+                }
+
+                .swiper-container-vertical.right_bar > .swiper-pagination-bullets {
+                  right: 5px;
+                }
+
+              }
+
+              @media (max-width: 480px) {
+                #navbar .navigation ul.menu li {
+                  margin-left: 20px;
+                }
+
+                #navbar .navigation ul.menu li ul li {
+                  padding: 0px 14px;
+                }
               }
             `}</style>
         </nav>

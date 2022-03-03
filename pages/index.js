@@ -12,24 +12,6 @@ import "swiper/css/pagination";
 import {Mousewheel, Pagination} from "swiper";
 
 export default function Home() {
-    // const size = useWindowSize();
-    // console.log(size)
-    // const [windowSize, setWindowSize] = useState({
-    //     width: undefined,
-    //     height: undefined,
-    // });
-    // if(size) {
-    //     if (size.width > 768) {
-    //         // alert('bigger 768')
-    //         useEffect(() => setVideoUrl('videos/home.mp4'), [])
-    //         // document.querySelector('source').src = "videos/home.mp4";
-    //     } else {
-    //         // alert('smaller 768')
-    //         // alert(document.querySelector('source').src)
-    //         useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
-    //         // document.querySelector('source').src = "/videos/home_mobile.mp4";
-    //     }
-    // }
 
     const handleOnIndexChanged = (activeIndex) => {
         document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
