@@ -116,7 +116,7 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={`${css.about}`}>
                             {/*<div className={css.breadcrumb}>*/}
-                            {/*    <p>About</p>*/}
+                            {/*    <p>About</p>*/}it s
                             {/*</div>*/}
                             <div className={css.about__content}>
                                 <h2>
@@ -219,8 +219,32 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.contact}>
                             <div className={css.contact__content}>
-                                <p>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층
-                                    16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</p>
+                                <h2>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
+                                <h2>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</h2>
+
+                                <div className="addr_icon">
+                                    <a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}>
+                                        <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="#" my-data-show-form1="true">
+                                        <i className="fa fa-envelope" aria-hidden="true"></i>
+                                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="#" my-data-show-form2="true">
+                                        <i className="fa fa-edit" aria-hidden="true" title="맘껏"></i>
+                                    </a>
+                                </div>
+                                <style jsx>{`
+                                  .addr_icon {
+                                    text-align: center;
+                                    margin-top: 30px;
+                                  }
+
+                                  .addr_icon a i {
+                                    font-size: 30px;
+                                    color: var(--color-white)
+                                  }
+                                `}</style>
+
                             </div>
                         </section>
                     </SwiperSlide>

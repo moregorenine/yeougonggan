@@ -163,6 +163,19 @@ p {
     object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+    background: rgba(255,255,255,0.3) !important;
+    opacity: 1 !important;
+    margin: 10px 0 !important;
+    border-radius: 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+    margin-left: -5px !important;;
+    width: 15px !important;;
+    background: #8eb5ff !important;
+}
+
 /*For below 768px screen width*/
 @media screen and (max-width: 768px) {
     /*Typography*/

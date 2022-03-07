@@ -500,6 +500,7 @@ const LayoutNavbar = () => {
                   padding: 0px 14px;
                 }
               }
+
             `}</style>
         </nav>
     )

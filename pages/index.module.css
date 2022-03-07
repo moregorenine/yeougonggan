@@ -40,7 +40,7 @@
 }
 
 .about__content {
-    padding: 0 30px;
+    padding: 0 40px;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -55,7 +55,7 @@
 }
 
 .service__content {
-    padding: 0 30px;
+    padding: 0 40px;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -70,7 +70,7 @@
 }
 
 .contact__content {
-    padding: 0 30px;
+    padding: 0 40px;
     width: 100%;
     position: absolute;
     top: 50%;
