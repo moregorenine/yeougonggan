@@ -35,37 +35,47 @@
 .about {
     width: 100%;
     height: 100%;
-    padding: 0 30px;
     background: center/cover no-repeat url("/images/page_bg1.jpg");
+    position: relative;
 }
 
 .about__content {
-    height: 100%;
-    transform: translateY(30%);
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 .service {
     width: 100%;
     height: 100%;
-    padding: 0 30px;
     background: center/cover no-repeat url("/images/page_bg1.jpg");
 }
 
 .service__content {
-    height: 100%;
-    transform: translateY(35%);
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 .contact {
     width: 100%;
     height: 100%;
-    padding: 0 30px;
     background: center/cover no-repeat url("/images/page_bg1.jpg");
 }
 
 .contact__content {
-    height: 100%;
-    transform: translateY(45%);
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 /*For below 768px screen width*/

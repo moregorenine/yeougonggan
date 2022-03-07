@@ -22,6 +22,7 @@ const LayoutNavbar = () => {
     };
     return (
         <nav id="navbar">
+            <div className="sub-header-bg"></div>
             <div className="navbar__logo">
                 <img src="/favicon.png" className="navbar__logo__icon"/>
                 <a href="/">여우공간</a>
@@ -58,6 +59,18 @@ const LayoutNavbar = () => {
                 </ul>
             </div>
             <style jsx>{`
+              .sub-header-bg {
+                border-top: 3px solid #8eb5ff;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                left: 0;
+                height: 90px;
+                background: #000000cf;
+                background: linear-gradient(to bottom, #0000009c, #00000000);
+                //z-index: 15
+              }
+
               .navbar__logo {
                 font-size: var(--font-medium);
                 font-weight: var(--weight-semi-bold);
@@ -391,7 +404,7 @@ const LayoutNavbar = () => {
                 #navbar.active ul li ul {
                   opacity: 1;
                 }
-                
+
                 #navbar .navigation {
                   width: 100%;
                   margin: 0 auto;
@@ -454,7 +467,6 @@ const LayoutNavbar = () => {
                 //  padding-left: 0px;
                 //  border: 0px;
                 //}
-
                 #navbar .navigation ul.menu li ul li a {
                   line-height: 25px;
                   display: inline-block;
