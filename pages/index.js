@@ -29,62 +29,47 @@ export default function Home() {
             case 7: //CONTACT
                 document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
                 break
-
-
         }
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
 
-    // if (typeof window !== "undefined") {
-    // (function () {
-    //     window.addEventListener("resize", resizeThrottler, false);
-    //
-    //     var resizeTimeout;
-    //
-    //     function resizeThrottler() {
-    //         // ignore resize events as long as an actualResizeHandler execution is in the queue
-    //         if (!resizeTimeout) {
-    //             resizeTimeout = setTimeout(function () {
-    //                 resizeTimeout = null;
-    //                 actualResizeHandler();
-    //
-    //                 // The actualResizeHandler will execute at a rate of 15fps
-    //             }, 66);
-    //         }
-    //     }
-    //
-    //     function actualResizeHandler() {
-    //         // handle the resize event
-    //         if (window.innerWidth > 768) {
-    //             useEffect(() => setVideoUrl('videos/home.mp4'), [])
-    //         } else {
-    //             useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
-    //         }
-    //     }
-    //
-    // }());
+    const [videoUrl, setVideoUrl] = useState(null)
+    if (process.browser) {
 
+        window.addEventListener("resize", resizeThrottler, false);
 
-    // // inside component, before return statement
-    // const [height, setHeight] = useState(null)
-    // const [width, setWidth] = useState(null)
-    // useEffect(() => setHeight(document.children[0].clientHeight), [
-    //     document.children[0].clientHeight
-    // ])
-    // useEffect(() => setWidth(document.children[0].clientWidth), [
-    //     document.children[0].clientWidth
-    // ])
-    //
-    // if (width > 768) {
-    //     alert(width)
-    //     useEffect(() => setVideoUrl('videos/home.mp4'), [])
-    //     // document.querySelector('source').src = "videos/home.mp4";
-    // } else {
-    //     useEffect(() => setVideoUrl('videos/home_mobile.mp4'), [])
-    //     // document.querySelector('source').src = "videos/home_mobile.mp4";
-    // }
+        actualResizeHandler();
 
-    // }
+        var resizeTimeout;
+
+        function resizeThrottler() {
+            // ignore resize events as long as an actualResizeHandler execution is in the queue
+            if (!resizeTimeout) {
+                resizeTimeout = setTimeout(function () {
+                    resizeTimeout = null;
+                    if (document.children[0].clientWidth > 768) {
+                        document.querySelector('#video').src = "/videos/home.mp4";
+                    } else {
+                        document.querySelector('#video').src = "/videos/home_mobile.mp4";
+                    }
+                }, 66);
+            }
+        }
+
+        function actualResizeHandler() {
+            if (document.children[0].clientWidth > 768) {
+                useEffect(() => setVideoUrl("/videos/home.mp4"), [
+                    "/videos/home.mp4"
+                ]);
+            } else {
+                useEffect(() => setVideoUrl("/videos/home_mobile.mp4"), [
+                    "/videos/home_mobile.mp4"
+                ]);
+            }
+        }
+
+    }
+
     return (
         <LayoutIndex>
             <div className={css.main}>
@@ -103,20 +88,13 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video autoPlay loop muted className={`${css.home__video} ${css.width__large}`}>
-                                <source src="/videos/home.mp4" type='video/mp4'/>
-                                {/*<source className={css.width__small} src="/videos/home_mobile.mp4" type='video/mp4'/>*/}
-                            </video>
-                            <video autoPlay loop muted className={`${css.home__video} ${css.width__small}`}>
-                                {/*<source className={css.width__large} src="/videos/home.mp4" type='video/mp4'/>*/}
-                                <source src="/videos/home_mobile.mp4" type='video/mp4'/>
-                            </video>
+                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`} src={videoUrl}></video>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={`${css.about}`}>
                             {/*<div className={css.breadcrumb}>*/}
-                            {/*    <p>About</p>*/}it s
+                            {/*    <p>About</p>*/}
                             {/*</div>*/}
                             <div className={css.about__content}>
                                 <h2>
@@ -243,7 +221,8 @@ export default function Home() {
                                     font-size: 30px;
                                     color: var(--color-white)
                                   }
-                                `}</style>
+                                `
+                                }</style>
 
                             </div>
                         </section>
