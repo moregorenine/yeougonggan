@@ -60,7 +60,7 @@ const LayoutNavbar = () => {
             </div>
             <style jsx>{`
               .sub-header-bg {
-                border-top: 3px solid #8eb5ff;
+                //border-top: 3px solid #8eb5ff;
                 position: fixed;
                 top: 0;
                 width: 100%;
