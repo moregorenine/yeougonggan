@@ -47,7 +47,7 @@ export default function Home() {
             if (!resizeTimeout) {
                 resizeTimeout = setTimeout(function () {
                     resizeTimeout = null;
-                    if (document.children[0].clientWidth > 768) {
+                    if (document.children[0].clientWidth > 500) {
                         document.querySelector('#video').src = "/videos/home.mp4";
                     } else {
                         document.querySelector('#video').src = "/videos/home_mobile.mp4";
@@ -57,7 +57,7 @@ export default function Home() {
         }
 
         function actualResizeHandler() {
-            if (document.children[0].clientWidth > 768) {
+            if (document.children[0].clientWidth > 500) {
                 useEffect(() => setVideoUrl("/videos/home.mp4"), [
                     "/videos/home.mp4"
                 ]);
@@ -88,7 +88,8 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`} src={videoUrl}></video>
+                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`}
+                                   src={videoUrl}></video>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -103,46 +104,45 @@ export default function Home() {
                                     여우공간 필라테스
                                 </h2>
                                 <h1>EXPERT + PASSION + SERVICE</h1>
-                                <p>
-                                    On-line offline marketing 창업컨설팅 전문가 집단 <br/>
+                                <h2>On-line offline marketing 창업컨설팅 전문가 집단</h2>
+                                <h3>
                                     고객에게 최고의 전문가를 제공하고 전문성 / 열정 / 서비스 정신으로 고객만족을 위해 <br/>
                                     혼신의 힘을 다합니다. 창업을 준비하시는 대표님들의 투자를 <br/>
                                     시장가치의 극대화하는 상생 원리를 실현합니다.
-                                </p>
+                                </h3>
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={css.service}>
                             <div className={css.service__content}>
+                                <h1>
+                                    변화와 혁신에 도전하는<br/>
+                                    우리의 미래 당신의 미래가 됩니다.
+                                </h1>
                                 <h2>
-                                    변화와 혁신에 도전하는 우리의 미래 당신의 미래가 됩니다. <br/>
                                     Our future challenging change and innovation <br/>
                                     becomes your future
                                 </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
-                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
-                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
-                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </p>
+                                <h3>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                </h3>
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={css.service}>
                             <div className={css.service__content}>
-                                <h2>
+                                <h1>
                                     START-UP BUSINESS
-                                </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
-                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
+                                </h1>
+                                <h2>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
                                     비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
                                     온.오프라인 HUMAN COMMUNITY 통해 <br/>
                                     E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </p>
+                                </h2>
                             </div>
                         </section>
                     </SwiperSlide>
@@ -197,8 +197,8 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.contact}>
                             <div className={css.contact__content}>
-                                <h2>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
-                                <h2>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</h2>
+                                <h2 style={{color:"black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
+                                <h2 style={{color:"black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</h2>
 
                                 <div className="addr_icon">
                                     <a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}>
