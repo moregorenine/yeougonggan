@@ -43,9 +43,9 @@ const LayoutNavbar = () => {
                     <li><a href="#" onClick={() => handleClick(3)}>service</a>
                         <ul>
                             <li><a href="#" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
-                            <li><a href="#" onClick={() => handleClick(5)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#" onClick={() => handleClick(6)}>BUSINESS PERFORMANCE</a></li>
-                            <li><a href="#" onClick={() => handleClick(7)}>NEW BUSINESS</a></li>
+                            <li><a href="#" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
+                            <li><a href="#" onClick={() => handleClick(7)}>BUSINESS PERFORMANCE</a></li>
+                            <li><a href="#" onClick={() => handleClick(8)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>
                     {/*<li><a href="#recruit">recruit</a>*/}
