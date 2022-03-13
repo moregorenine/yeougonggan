@@ -12,7 +12,6 @@ import "swiper/css/pagination";
 import {Mousewheel, Pagination} from "swiper";
 
 export default function Home() {
-
     const handleOnIndexChanged = (activeIndex) => {
         document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
         switch (activeIndex) {
@@ -31,6 +30,13 @@ export default function Home() {
                 break
         }
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
+    };
+
+    const handleClick = (nthChild) => {
+        if (document.querySelector('#navbar').classList.contains("active")) {
+            document.querySelector('#navbar').classList.toggle("active")
+        }
+        document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
 
     const [videoUrl, setVideoUrl] = useState(null)
@@ -124,10 +130,18 @@ export default function Home() {
                                     Our future challenging change and innovation <br/>
                                     becomes your future
                                 </h2>
-                                <h3>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </h3>
+                                <p>
+                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
+                                    있도록지원합니다. <br/>
+                                    온.오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이
+                                    최종 목표입니다.
+                                </p>
+                                <div id="btn_group">
+                                    <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
+                                    <button className="btn" onClick={() => handleClick(5)}>RECOVERY PROJECT</button>
+                                    <button className="btn" onClick={() => handleClick(6)}>BUSINESS PERFORMANCE</button>
+                                    <button className="btn" onClick={() => handleClick(7)}>NEW BUSINESS</button>
+                                </div>
                             </div>
                         </section>
                     </SwiperSlide>
@@ -197,8 +211,9 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.contact}>
                             <div className={css.contact__content}>
-                                <h2 style={{color:"black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
-                                <h2 style={{color:"black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</h2>
+                                <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
+                                <h2 style={{color: "black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu,
+                                    Seoul, 6th floor.</h2>
 
                                 <div className="addr_icon">
                                     <a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}>
@@ -211,24 +226,49 @@ export default function Home() {
                                         <i className="fa fa-edit" aria-hidden="true" title="맘껏"></i>
                                     </a>
                                 </div>
-                                <style jsx>{`
-                                  .addr_icon {
-                                    text-align: center;
-                                    margin-top: 30px;
-                                  }
-
-                                  .addr_icon a i {
-                                    font-size: 30px;
-                                    color: var(--color-white)
-                                  }
-                                `
-                                }</style>
-
                             </div>
                         </section>
                     </SwiperSlide>
                 </Swiper>
             </div>
+
+            <style jsx>{`
+
+              #btn_group {
+                margin-top: 20px;
+              }
+
+              #btn_group button {
+                margin-top: 5px;
+                border: 1px solid skyblue;
+                background-color: rgba(0, 0, 0, 0);
+                color: skyblue;
+                padding: 5px;
+              }
+
+              .btn {
+                border-radius: 5px;
+                margin: 0 5px;
+                color: white;
+              }
+
+              #btn_group button:hover {
+                color: white;
+                background-color: skyblue;
+              }
+
+              .addr_icon {
+                text-align: center;
+                margin-top: 30px;
+              }
+
+              .addr_icon a i {
+                font-size: 30px;
+                color: var(--color-white)
+              }
+
+            `}</style>
+
         </LayoutIndex>
     )
 }
