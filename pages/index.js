@@ -23,6 +23,7 @@ export default function Home() {
             case 4:
             case 5:
             case 6:
+            case 7:
                 document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
                 break
             case 7: //CONTACT
@@ -138,9 +139,9 @@ export default function Home() {
                                 </p>
                                 <div id="btn_group">
                                     <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
-                                    <button className="btn" onClick={() => handleClick(5)}>RECOVERY PROJECT</button>
-                                    <button className="btn" onClick={() => handleClick(6)}>BUSINESS PERFORMANCE</button>
-                                    <button className="btn" onClick={() => handleClick(7)}>NEW BUSINESS</button>
+                                    <button className="btn" onClick={() => handleClick(6)}>RECOVERY PROJECT</button>
+                                    <button className="btn" onClick={() => handleClick(7)}>BUSINESS PERFORMANCE</button>
+                                    <button className="btn" onClick={() => handleClick(8)}>NEW BUSINESS</button>
                                 </div>
                             </div>
                         </section>
@@ -148,15 +149,65 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.service}>
                             <div className={css.service__content}>
-                                <h1>
-                                    START-UP BUSINESS
-                                </h1>
                                 <h2>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
-                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
-                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
+                                    START-UP BUSINESS
                                 </h2>
+                                <div className={css.service__content__startup__graph}>
+                                    <img src="/images/service/startup.png" alt="START-UP BUSINESS"/>
+                                </div>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    START-UP BUSINESS
+                                </h2>
+                                <div className={css.service__content__startup__projects}>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup1.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup2.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup3.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup4.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup5.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/startup6.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </SwiperSlide>
