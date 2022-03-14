@@ -24,7 +24,7 @@ const LayoutNavbar = () => {
         <nav id="navbar">
             <div className="sub-header-bg"></div>
             <div className="navbar__logo">
-                <img src="/favicon.png" className="navbar__logo__icon"/>
+                <img src="/favicon.png" className="navbar__logo__icon"/>{' '}
                 <a href="/">여우공간</a>
             </div>
             {/*<a href="/">*/}
