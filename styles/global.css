@@ -57,7 +57,6 @@ body {
     margin: 0;
     font-family: 'Nanum Gothic', sans-serif;
     cursor: default;
-    background: center/cover no-repeat url("/images/page_bg1.jpg");
 }
 
 * {
