@@ -10,6 +10,7 @@ import "swiper/css/bundle";
 import "swiper/css/pagination";
 
 import {Mousewheel, Pagination} from "swiper";
+import st from "../components/layout-arrowup.module.css";
 
 export default function Home() {
     const handleOnIndexChanged = (activeIndex) => {
@@ -32,8 +33,16 @@ export default function Home() {
                 document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
                 break
         }
+        const arrowUp = document.querySelector('#arrowUp');
+        if (activeIndex > 0) {
+            arrowUp.classList.add(st.visible)
+        } else {
+            arrowUp.classList.remove(st.visible)
+        }
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
+
+
 
     const handleClick = (nthChild) => {
         if (document.querySelector('#navbar').classList.contains("active")) {
@@ -76,6 +85,10 @@ export default function Home() {
                 ]);
             }
         }
+
+        document.querySelector('#arrowUp').addEventListener('click', () => {
+            handleClick(1);
+        });
 
     }
 

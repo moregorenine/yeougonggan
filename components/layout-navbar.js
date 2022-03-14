@@ -1,5 +1,3 @@
-// import st from './layout-navbar.module.css';
-
 const LayoutNavbar = () => {
     // let cntLoad = 0;
     // if (typeof window !== "undefined") {
@@ -14,6 +12,7 @@ const LayoutNavbar = () => {
     const handleToggle = () => {
         document.querySelector('#navbar').classList.toggle("active")
     };
+
     const handleClick = (nthChild) => {
         if (document.querySelector('#navbar').classList.contains("active")) {
             document.querySelector('#navbar').classList.toggle("active")
@@ -44,7 +43,8 @@ const LayoutNavbar = () => {
                         <ul>
                             <li><a href="#start-up" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
                             <li><a href="#recovery-project" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#business-performance" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a></li>
+                            <li><a href="#business-performance" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a>
+                            </li>
                             <li><a href="#new-business" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>

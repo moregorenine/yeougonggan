@@ -7,7 +7,7 @@
 }
 
 .home__video {
-    z-index: 0;
+    /*z-index: 0;*/
     position: absolute;
     top: 50%;
     left: 50%;
