@@ -24,9 +24,11 @@ export default function Home() {
             case 5:
             case 6:
             case 7:
+            case 8:
+            case 9:
                 document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
                 break
-            case 7: //CONTACT
+            case 10: //CONTACT
                 document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
                 break
         }

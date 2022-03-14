@@ -38,24 +38,17 @@ const LayoutNavbar = () => {
             </div>
             <div className="navigation">
                 <ul className="menu">
-                    <li><a href="#javascript" onClick={() => handleClick(2)}>About</a>
+                    <li><a href="#about" onClick={() => handleClick(2)}>About</a>
                     </li>
-                    <li><a href="#javascript" onClick={() => handleClick(3)}>service</a>
+                    <li><a href="#service" onClick={() => handleClick(3)}>service</a>
                         <ul>
-                            <li><a href="#javascript" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
-                            <li><a href="#javascript" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#javascript" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a></li>
-                            <li><a href="#javascript" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
+                            <li><a href="#start-up" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
+                            <li><a href="#recovery-project" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
+                            <li><a href="#business-performance" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a></li>
+                            <li><a href="#new-business" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>
-                    {/*<li><a href="#recruit">recruit</a>*/}
-                    {/*    <ul>*/}
-                    {/*        <li><a href="page/?pn=recruit#hope">인재상</a></li>*/}
-                    {/*        <li><a href="page/?pn=recruit#guide">채용안내</a></li>*/}
-                    {/*    </ul>*/}
-                    {/*</li>*/}
-                    {/*<li><a href="#news">news</a></li>*/}
-                    <li><a href="#javascript" onClick={() => handleClick(8)}>contact</a></li>
+                    <li><a href="#contact" onClick={() => handleClick(10)}>contact</a></li>
                 </ul>
             </div>
             <style jsx>{`
