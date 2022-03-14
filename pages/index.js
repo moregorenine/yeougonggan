@@ -155,7 +155,7 @@ export default function Home() {
                                     START-UP BUSINESS
                                 </h2>
                                 <div className={css.service__content__startup__graph}>
-                                    <img src="/images/service/startup.png" alt="START-UP BUSINESS"/>
+                                    <img src="/images/homepage/service/startup.png" alt="START-UP BUSINESS"/>
                                 </div>
                             </div>
                         </section>
@@ -168,42 +168,42 @@ export default function Home() {
                                 </h2>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup1.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup1.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup2.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup2.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup3.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup3.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup4.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup4.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup5.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup5.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/startup6.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/startup6.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
@@ -220,7 +220,7 @@ export default function Home() {
                                     RECOVERY PROJECT
                                 </h2>
                                 <div className={css.service__content__startup__graph}>
-                                    <img src="/images/service/recovery.png" alt="START-UP BUSINESS"/>
+                                    <img src="/images/homepage/service/recovery.png" alt="START-UP BUSINESS"/>
                                 </div>
                             </div>
                         </section>
@@ -233,42 +233,42 @@ export default function Home() {
                                 </h2>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery1.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery1.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery2.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery2.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery3.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery3.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery4.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery4.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery5.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery5.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/images/service/recovery6.png"/>
+                                        <img className={css.project__image} src="/images/homepage/service/recovery6.png"/>
                                         <div className={css.project__description}>
                                             <h3>image1</h3>
                                             <p>image1 description</p>
@@ -284,13 +284,9 @@ export default function Home() {
                                 <h2>
                                     BUSINESS PERFORMANCE
                                 </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
-                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
-                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
-                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </p>
+                                <div className={css.service__content__startup__graph}>
+                                    <img src="/images/homepage/businessperformance.png" alt="START-UP BUSINESS"/>
+                                </div>
                             </div>
                         </section>
                     </SwiperSlide>
@@ -300,13 +296,9 @@ export default function Home() {
                                 <h2>
                                     NEW BUSINESS
                                 </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
-                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
-                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
-                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </p>
+                                <div className={css.service__content__startup__graph}>
+                                    <img src="/images/homepage/newbusiness.png" alt="START-UP BUSINESS"/>
+                                </div>
                             </div>
                         </section>
                     </SwiperSlide>
@@ -321,11 +313,11 @@ export default function Home() {
                                     <a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}>
                                         <i className="fa fa-map-marker" aria-hidden="true"></i>
                                     </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" my-data-show-form1="true">
+                                    <a href="mailto:yeougonggan@gmail.com">
                                         <i className="fa fa-envelope" aria-hidden="true"></i>
                                     </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" my-data-show-form2="true">
-                                        <i className="fa fa-edit" aria-hidden="true" title="맘껏"></i>
+                                    <a href="https://www.instagram.com/fox_space_pilates/" target={"_blank"}>
+                                        <i className="fa-brands fa-instagram" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
