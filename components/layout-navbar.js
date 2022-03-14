@@ -38,14 +38,14 @@ const LayoutNavbar = () => {
             </div>
             <div className="navigation">
                 <ul className="menu">
-                    <li><a href="#" onClick={() => handleClick(2)}>About</a>
+                    <li><a href="javascript:;" onClick={() => handleClick(2)}>About</a>
                     </li>
-                    <li><a href="#" onClick={() => handleClick(3)}>service</a>
+                    <li><a href="javascript:;" onClick={() => handleClick(3)}>service</a>
                         <ul>
-                            <li><a href="#" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
-                            <li><a href="#" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#" onClick={() => handleClick(7)}>BUSINESS PERFORMANCE</a></li>
-                            <li><a href="#" onClick={() => handleClick(8)}>NEW BUSINESS</a></li>
+                            <li><a href="javascript:;" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
+                            <li><a href="javascript:;" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
+                            <li><a href="javascript:;" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a></li>
+                            <li><a href="javascript:;" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>
                     {/*<li><a href="#recruit">recruit</a>*/}
@@ -55,7 +55,7 @@ const LayoutNavbar = () => {
                     {/*    </ul>*/}
                     {/*</li>*/}
                     {/*<li><a href="#news">news</a></li>*/}
-                    <li><a href="#" onClick={() => handleClick(8)}>contact</a></li>
+                    <li><a href="javascript:;" onClick={() => handleClick(8)}>contact</a></li>
                 </ul>
             </div>
             <style jsx>{`

@@ -140,8 +140,8 @@ export default function Home() {
                                 <div id="btn_group">
                                     <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
                                     <button className="btn" onClick={() => handleClick(6)}>RECOVERY PROJECT</button>
-                                    <button className="btn" onClick={() => handleClick(7)}>BUSINESS PERFORMANCE</button>
-                                    <button className="btn" onClick={() => handleClick(8)}>NEW BUSINESS</button>
+                                    <button className="btn" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</button>
+                                    <button className="btn" onClick={() => handleClick(9)}>NEW BUSINESS</button>
                                 </div>
                             </div>
                         </section>
@@ -217,13 +217,62 @@ export default function Home() {
                                 <h2>
                                     RECOVERY PROJECT
                                 </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 <br/>
-                                    보완하고 AGILE 프레임워크 활용하여 유기적 <br/>
-                                    비즈니스와 매출 회복의 혁신을 추진할 수 있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 <br/>
-                                    E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이 최종 목표입니다.
-                                </p>
+                                <div className={css.service__content__startup__graph}>
+                                    <img src="/images/service/recovery.png" alt="START-UP BUSINESS"/>
+                                </div>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2>
+                                    RECOVERY PROJECT
+                                </h2>
+                                <div className={css.service__content__startup__projects}>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery1.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery2.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery3.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery4.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery5.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                    <div className={css.service__content__startup__project}>
+                                        <img className={css.project__image} src="/images/service/recovery6.png"/>
+                                        <div className={css.project__description}>
+                                            <h3>image1</h3>
+                                            <p>image1 description</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </SwiperSlide>
