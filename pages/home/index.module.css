@@ -51,9 +51,10 @@
     padding: 0px;
     width: 100%;
     position: absolute;
-    top: 50%;
+    /*top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);*/
+    top:90px;
 }
 
 .service__content__startup__projects {

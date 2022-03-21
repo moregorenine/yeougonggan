@@ -141,20 +141,24 @@ export default function Home() {
                         <section className={css.service}>
                             <div className={css.service__content}>
                                 <h2 class="main_h2_tit">Service</h2>
-                                <h1>
-                                    변화와 혁신에 도전하는<br/>
-                                    우리의 미래 당신의 미래가 됩니다.
-                                </h1>
-                                <h2>
-                                    Our future challenging change and innovation <br/>
-                                    becomes your future
-                                </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
-                                    있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이
-                                    최종 목표입니다.
-                                </p>
+                                <div class="service_box">
+                                    <div class="service_box_left">
+                                        <p class="service_titA">
+                                            변화와 혁신에 도전하는<br/>
+                                            우리의 미래 당신의 미래가 됩니다.</p>
+                                        <p class="service_titB">
+                                            Our future challenging change and innovation becomes your future</p>
+                                    </div>
+                                    <div class="service_box_right">
+                                        <p class="service_titC">
+                                            여우공간에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
+                                            있도록지원합니다. <br/>
+                                            온·오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이
+                                            최종 목표입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                
                                 <div id="btn_group">
                                     <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
                                     <button className="btn" onClick={() => handleClick(6)}>RECOVERY PROJECT</button>
