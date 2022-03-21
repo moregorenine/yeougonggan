@@ -174,10 +174,11 @@ p {
     position:relative;
     padding:0 0 0 140px;
     margin:70px 0 0 120px;
+    color:#fff;
   }
   .main_h2_tit::before{width:92px; height:2px; position:absolute;left:0; top:35px; content: ''; background-color: #fff; }
 
-.about_titA{font-size:44px; font-weight:700; color:#fff;}
+.about_titA{font-size:44px; font-weight:700; color:#fff; margin:30px 0 0 0}
 .about_titA span{font-family:'Roboto'; font-size:48px; color:#ff7f00;}
 .about_titB {color:#fff;font-size:20px; font-weight:300; margin-top:38px;}
 .about_box{display: flex; justify-content:center; margin-top:40px;}
@@ -187,9 +188,17 @@ p {
 .inner_box{border:10px solid #ff7f00; width:196px; height:190px; margin-top:19px; margin-left:19px; color: #fff; font-size: 26px; font-weight: 700; position: relative;}
 .inner_box span{display:block; margin-top:100px;}
 .about_expert .inner_box::after{width:60px; height:62px; content: ''; position: absolute; background: url('/home/images/expert_icon.png') no-repeat; left:35%; top:35px;}
-.about_passion .inner_box::after{width:62px; height:61px; content: ''; position: absolute; background: url('/home/images/passion_icon.png') no-repeat; left:35%; top:35px; margin-left:-5px;}
-.about_service .inner_box::after{width:60px; height:56px; content: ''; position: absolute; background: url('/home/images/service_icon.png') no-repeat; left:35%; top:35px;}
+.about_passion .inner_box::after{width:62px; height:61px; content: ''; position: absolute; background: url('/home/images/passion_icon.png') no-repeat; left:35%; top:36px; margin-left:-5px;}
+.about_service .inner_box::after{width:60px; height:56px; content: ''; position: absolute; background: url('/home/images/service_icon.png') no-repeat; left:35%; top:38px;}
 .about_bottom{margin-top:60px; font-size:16px; font-weight: 300; color:#fff; }
+
+.service_box{display: flex; margin:30px 260px 0;}
+.service_box .service_box_left{width:50%; position: relative;}
+.service_box .service_box_left::after{content: ''; position: absolute; width: 1px; height:174px; top:0; right:0; background-color:rgba(255,255,255,0.3);}
+.service_box .service_box_right{width:50%;}
+.service_box .service_box_left .service_titA {color:#fff; font-size: 46px; letter-spacing:-0.5px; text-align: left; line-height:55px;}
+.service_box .service_box_left .service_titB {color:#f1f1f1; font-size:23px; font-family: 'Roboto'; text-align:left; margin-top:15px; font-weight: 300; line-height: 26px; letter-spacing: -0.3px;}
+.service_box .service_box_right .service_titC {color:#f1f1f1; font-size:15px; font-weight: 300; text-align: left; margin-left:60px; line-height: 27px;}
 
 
 
