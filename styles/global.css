@@ -55,7 +55,7 @@ body,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR','Roboto','Nanum Gothic', sans-serif;
     cursor: default;
 }
 
@@ -165,6 +165,34 @@ p {
     width: 15px !important;;
     background: #8eb5ff !important;
 }
+
+.main_h2_tit {
+    text-align:left;
+    font-family: 'Roboto';
+    font-size:60px;
+    font-weight:700;
+    position:relative;
+    padding:0 0 0 140px;
+    margin:70px 0 0 120px;
+  }
+  .main_h2_tit::before{width:92px; height:2px; position:absolute;left:0; top:35px; content: ''; background-color: #fff; }
+
+.about_titA{font-size:44px; font-weight:700; color:#fff;}
+.about_titA span{font-family:'Roboto'; font-size:48px; color:#ff7f00;}
+.about_titB {color:#fff;font-size:20px; font-weight:300; margin-top:38px;}
+.about_box{display: flex; justify-content:center; margin-top:40px;}
+.out_box{border:1px solid rgba(255,255,255,0.8); width:236px; height:230px; margin-right:41px; margin-left:27px; position:relative;}
+.out_box:after{ content: ''; position: absolute; background: url('/home/images/plus_icon.png') no-repeat;width:16px; height:16px; top:50%; right:-42px;}
+.about_service.out_box:after{background: none;}
+.inner_box{border:10px solid #ff7f00; width:196px; height:190px; margin-top:19px; margin-left:19px; color: #fff; font-size: 26px; font-weight: 700; position: relative;}
+.inner_box span{display:block; margin-top:100px;}
+.about_expert .inner_box::after{width:60px; height:62px; content: ''; position: absolute; background: url('/home/images/expert_icon.png') no-repeat; left:35%; top:35px;}
+.about_passion .inner_box::after{width:62px; height:61px; content: ''; position: absolute; background: url('/home/images/passion_icon.png') no-repeat; left:35%; top:35px; margin-left:-5px;}
+.about_service .inner_box::after{width:60px; height:56px; content: ''; position: absolute; background: url('/home/images/service_icon.png') no-repeat; left:35%; top:35px;}
+.about_bottom{margin-top:60px; font-size:16px; font-weight: 300; color:#fff; }
+
+
+
 
 /*For below 768px screen width*/
 @media screen and (max-width: 768px) {
