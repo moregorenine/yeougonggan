@@ -119,24 +119,28 @@ export default function Home() {
                             {/*    <p>About</p>*/}
                             {/*</div>*/}
                             <div className={css.about__content}>
-                                <h2>
-                                    아름다운 여자들의 우아한 공간,<br/>
-                                    아름다운 당신이 머무는 공간,<br/>
+                                <h2 class="main_h2_tit">About</h2>
+                                <p class="about_titA"><span>On-line offline marketing</span> 창업컨설팅 전문가 집단</p>
+                                <p class="about_titB">
+                                    아름다운 여자들의 우아한 공간, 아름다운 당신이 머무는 공간,<br/>
                                     여우공간 필라테스
-                                </h2>
-                                <h1>EXPERT + PASSION + SERVICE</h1>
-                                <h2>On-line offline marketing 창업컨설팅 전문가 집단</h2>
-                                <h3>
-                                    고객에게 최고의 전문가를 제공하고 전문성 / 열정 / 서비스 정신으로 고객만족을 위해 <br/>
-                                    혼신의 힘을 다합니다. 창업을 준비하시는 대표님들의 투자를 <br/>
-                                    시장가치의 극대화하는 상생 원리를 실현합니다.
-                                </h3>
+                                </p>
+                                <div class="about_box">
+                                    <div class="about_expert out_box"><div class="inner_box"><span>EXPERT</span></div></div>
+                                    <div class="about_passion out_box"><div class="inner_box"><span>PASSION</span></div></div>
+                                    <div class="about_service out_box"><div class="inner_box"><span>SERVICE</span></div></div>
+                                </div>
+                                <p class="about_bottom">
+                                    고객에게 최고의 전문가를 제공하고 전문성 · 열정 · 서비스 정신으로 고객만족을 위해 혼신의 힘을 다합니다.<br/>
+                                    창업을 준비하시는 대표님들의 투자를 시장가치의 극대화하는 상생 원리를 실현합니다.
+                                </p>
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={css.service}>
                             <div className={css.service__content}>
+                                <h2 class="main_h2_tit">Service</h2>
                                 <h1>
                                     변화와 혁신에 도전하는<br/>
                                     우리의 미래 당신의 미래가 됩니다.
@@ -317,6 +321,7 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.contact}>
                             <div className={css.contact__content}>
+                                <h2 class="main_h2_tit">Contact</h2>
                                 <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
                                 <h2 style={{color: "black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu,
                                     Seoul, 6th floor.</h2>

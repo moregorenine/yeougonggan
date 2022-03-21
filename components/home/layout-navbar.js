@@ -59,14 +59,15 @@ const LayoutNavbar = () => {
                 width: 100%;
                 left: 0;
                 height: 90px;
-                background: #000000cf;
+                border-bottom:1px solid rgba(255, 255, 255, .3);
+                background: #000000;
                 background: linear-gradient(to bottom, #0000009c, #00000000);
                 //z-index: 15
               }
 
               .navbar__logo {
-                font-size: var(--font-medium);
-                font-weight: var(--weight-semi-bold);
+                font-size: 23px;
+                font-weight: 500;
                 z-index: 20;
                 left: 45px;
                 top: 15px;
@@ -123,8 +124,9 @@ const LayoutNavbar = () => {
 
               #navbar .navigation {
                 //margin-top: 40px;
-                margin-right: 60px;
-                float: right;
+                //margin-right: 60px;
+                //float: right;
+                text-align:center;
               }
 
               #navbar.active .navigation {
@@ -133,12 +135,12 @@ const LayoutNavbar = () => {
               #navbar ul {
                 display: inline-block;
               }
-
+              
               #navbar ul li {
                 margin-left: 60px;
                 position: relative;
               }
-
+              
               #navbar > div > ul > li > a {
                 font-size: 16px;
                 padding-bottom: 10px;
