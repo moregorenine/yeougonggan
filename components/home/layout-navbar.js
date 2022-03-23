@@ -1,13 +1,4 @@
 const LayoutNavbar = () => {
-    // let cntLoad = 0;
-    // if (typeof window !== "undefined") {
-    //     document.querySelector('#navbar .icon').addEventListener('click', () => {
-    //         console.log(++cntLoad)
-    //         if (document.querySelector('#navbar') !== undefined) {
-    //             document.querySelector('#navbar').classList.toggle("active")
-    //         }
-    //     });
-    // }
 
     const handleToggle = () => {
         document.querySelector('#navbar').classList.toggle("active")
@@ -21,23 +12,8 @@ const LayoutNavbar = () => {
     };
 
     if (process.browser) {
-        // const urlParams = new URLSearchParams(window.location.search);
-        // const page = urlParams.get('page');
-        // console.log(page);
-        // // window.history.replaceState({}, document.title, "/home");
-        //
-        // if (document.querySelector('#navbar')) {
-        //     switch (page) {
-        //         case 'about':
-        //             handleClick(2)
-        //             break;
-        //         case 'service':
-        //             handleClick(3)
-        //             break;
-        //     }
-        // }
 
-        document.querySelectorAll('.menu li a').forEach(a => {
+        document.querySelectorAll('.menu>li>a').forEach(a => {
             a.addEventListener('click', ev => {
                 ev.preventDefault();
             })
@@ -66,11 +42,11 @@ const LayoutNavbar = () => {
                     </li>
                     <li><a href="#service" onClick={() => handleClick(3)}>service</a>
                         <ul>
-                            <li><a href="#start-up" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
-                            <li><a href="#recovery-project" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#business-performance" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a>
+                            <li><a href="/home/service?page=startup">START-UP BUSINESS</a></li>
+                            <li><a href="/home/service?page=recovery">RECOVERY PROJECT</a></li>
+                            <li><a href="/home/service?page=performance">BUSINESS PERFORMANCE</a>
                             </li>
-                            <li><a href="#new-business" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
+                            <li><a href="/home/service?page=newbusiness">NEW BUSINESS</a></li>
                         </ul>
                     </li>
                     <li><a href="#contact" onClick={() => handleClick(4)}>contact</a></li>

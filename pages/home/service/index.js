@@ -13,33 +13,32 @@ import {Mousewheel, Pagination} from "swiper";
 import st from "../../../components/home/layout-arrowup.module.css";
 
 export default function Home() {
-    const handleOnIndexChanged = (activeIndex) => {
-        document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
-        switch (activeIndex) {
-            case 1: //START-UP BUSINESS
-                document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
-                break
-            case 2: //RECOVERY PROJECT
-            case 3: //BUSINESS PERFORMANCE
-            case 4: //NEW BUSINESS
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-                document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
-                break
-            case 9: //CONTACT
-                document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
-                break
-        }
-        const arrowUp = document.querySelector('#arrowUp');
-        if (activeIndex > 0) {
-            arrowUp.classList.add(st.visible)
-        } else {
-            arrowUp.classList.remove(st.visible)
-        }
-        // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
-    };
+    // const handleOnIndexChanged = (activeIndex) => {
+    //     document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
+    //     switch (activeIndex) {
+    //         case 1: //START-UP BUSINESS
+    //         case 2:
+    //             document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
+    //             break;
+    //         case 3: //RECOVERY PROJECT
+    //         case 4:
+    //             document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
+    //             break;
+    //         case 5: //BUSINESS PERFORMANCE
+    //             document.querySelector('#navbar .navigation .menu > li:nth-child(5)').classList.add('active');
+    //             break;
+    //         case 6: //NEW BUSINESS
+    //             document.querySelector('#navbar .navigation .menu > li:nth-child(6)').classList.add('active');
+    //             break;
+    //     }
+    //     const arrowUp = document.querySelector('#arrowUp');
+    //     if (activeIndex > 0) {
+    //         arrowUp.classList.add(st.visible)
+    //     } else {
+    //         arrowUp.classList.remove(st.visible)
+    //     }
+    //     // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
+    // };
 
 
 
@@ -58,6 +57,33 @@ export default function Home() {
 
     }
 
+    const swiperInit = () => {
+        if (process.browser) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            if (page) {
+                switch (page) {
+                    case 'startup':
+                        handleClick(1)
+                        // window.history.replaceState({}, document.title, "/home/service");
+                        break;
+                    case 'recovery':
+                        handleClick(3)
+                        // window.history.replaceState({}, document.title, "/home/service");
+                        break;
+                    case 'performance':
+                        handleClick(5)
+                        // window.history.replaceState({}, document.title, "/home/service");
+                        break;
+                    case 'newbusiness':
+                        handleClick(6)
+                        // window.history.replaceState({}, document.title, "/home/service");
+                        break;
+                }
+            }
+        }
+    }
+
     return (
         <LayoutIndex>
             <div className={css.main}>
@@ -72,7 +98,8 @@ export default function Home() {
                     }}
                     modules={[Mousewheel, Pagination]}
                     className="mySwiper"
-                    onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
+                    // onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
+                    onAfterInit={swiperInit}
                 >
                     <SwiperSlide>
                         <section className={css.service}>

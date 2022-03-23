@@ -1,6 +1,7 @@
 import LayoutIndex from "../../components/home/layout-index";
 import css from "./index.module.css"
 import React, {useEffect, useState} from "react";
+import Link from 'next/link'
 // Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -51,15 +52,15 @@ export default function Home() {
                 switch (page) {
                     case 'about':
                         handleClick(2)
-                        window.history.replaceState({}, document.title, "/home");
+                        // window.history.replaceState({}, document.title, "/home");
                         break;
                     case 'service':
                         handleClick(3)
-                        window.history.replaceState({}, document.title, "/home");
+                        // window.history.replaceState({}, document.title, "/home");
                         break;
                     case 'contact':
                         handleClick(4)
-                        window.history.replaceState({}, document.title, "/home");
+                        // window.history.replaceState({}, document.title, "/home");
                         break;
                 }
             }
@@ -121,7 +122,6 @@ export default function Home() {
                     className="mySwiper"
                     onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
                     onAfterInit={swiperInit}
-                    // afterInit={swiperInit()}
                 >
                     <SwiperSlide>
                         <section className={css.home}>
@@ -183,10 +183,31 @@ export default function Home() {
                                 </div>
 
                                 <div id="btn_group">
-                                    <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
-                                    <button className="btn" onClick={() => handleClick(6)}>RECOVERY PROJECT</button>
-                                    <button className="btn" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</button>
-                                    <button className="btn" onClick={() => handleClick(9)}>NEW BUSINESS</button>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'startup'}
+                                    }}>
+
+                                        <button className="btn">START-UP BUSINESS</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'recovery'}
+                                    }}>
+                                        <button className="btn">RECOVERY PROJECT</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'performance'}
+                                    }}>
+                                        <button className="btn">BUSINESS PERFORMANCE</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'newbusiness'}
+                                    }}>
+                                        <button className="btn">NEW BUSINESS</button>
+                                    </Link>
                                 </div>
                             </div>
                         </section>

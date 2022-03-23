@@ -1,13 +1,4 @@
 const LayoutNavbar = () => {
-    // let cntLoad = 0;
-    // if (typeof window !== "undefined") {
-    //     document.querySelector('#navbar .icon').addEventListener('click', () => {
-    //         console.log(++cntLoad)
-    //         if (document.querySelector('#navbar') !== undefined) {
-    //             document.querySelector('#navbar').classList.toggle("active")
-    //         }
-    //     });
-    // }
 
     const handleToggle = () => {
         document.querySelector('#navbar').classList.toggle("active")
@@ -39,16 +30,16 @@ const LayoutNavbar = () => {
                 <ul className="menu__service">
                     <li><a href="/home?page=about">About</a>
                     </li>
-                    <li><a href="#service" onClick={() => handleClick(3)}>service</a>
+                    <li className="active"><a href="/home?page=service">service</a>
                         <ul>
-                            <li><a href="#start-up" onClick={() => handleClick(4)}>START-UP BUSINESS</a></li>
-                            <li><a href="#recovery-project" onClick={() => handleClick(6)}>RECOVERY PROJECT</a></li>
-                            <li><a href="#business-performance" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</a>
+                            <li><a href="#start-up" onClick={() => handleClick(1)}>START-UP BUSINESS</a></li>
+                            <li><a href="#recovery-project" onClick={() => handleClick(3)}>RECOVERY PROJECT</a></li>
+                            <li><a href="#business-performance" onClick={() => handleClick(5)}>BUSINESS PERFORMANCE</a>
                             </li>
-                            <li><a href="#new-business" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
+                            <li><a href="#new-business" onClick={() => handleClick(6)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>
-                    <li><a href="/home?page=contact" onClick={() => handleClick(10)}>contact</a></li>
+                    <li><a href="/home?page=contact">contact</a></li>
                 </ul>
             </div>
             <style jsx>{`

@@ -1,5 +1,5 @@
 import LayoutHead from './layout-head';
-import LayoutNavbar from './layout-service-navbar';
+import LayoutNavbar from './layout-navbar-service';
 import LayoutArrowup from "./layout-arrowup";
 import Script from 'next/script'
 
