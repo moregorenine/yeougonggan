@@ -1,6 +1,7 @@
 import LayoutIndex from "../../components/home/layout-index";
 import css from "./index.module.css"
 import React, {useEffect, useState} from "react";
+import Link from 'next/link'
 // Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -20,15 +21,9 @@ export default function Home() {
                 document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
                 break
             case 2: //SEVICE
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
                 document.querySelector('#navbar .navigation .menu > li:nth-child(2)').classList.add('active');
                 break
-            case 9: //CONTACT
+            case 3: //CONTACT
                 document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
                 break
         }
@@ -42,7 +37,6 @@ export default function Home() {
     };
 
 
-
     const handleClick = (nthChild) => {
         if (document.querySelector('#navbar').classList.contains("active")) {
             document.querySelector('#navbar').classList.toggle("active")
@@ -50,13 +44,35 @@ export default function Home() {
         document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
 
-    const [videoUrl, setVideoUrl] = useState(null)
+    const swiperInit = () => {
+        if (process.browser) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            if (page) {
+                switch (page) {
+                    case 'about':
+                        handleClick(2)
+                        // window.history.replaceState({}, document.title, "/home");
+                        break;
+                    case 'service':
+                        handleClick(3)
+                        // window.history.replaceState({}, document.title, "/home");
+                        break;
+                    case 'contact':
+                        handleClick(4)
+                        // window.history.replaceState({}, document.title, "/home");
+                        break;
+                }
+            }
+        }
+    }
+
+    const [videoUrl, setVideoUrl] = useState(null);
+
     if (process.browser) {
 
         window.addEventListener("resize", resizeThrottler, false);
-
         actualResizeHandler();
-
         var resizeTimeout;
 
         function resizeThrottler() {
@@ -88,7 +104,6 @@ export default function Home() {
         document.querySelector('#arrowUp').addEventListener('click', () => {
             handleClick(1);
         });
-
     }
 
     return (
@@ -106,6 +121,7 @@ export default function Home() {
                     modules={[Mousewheel, Pagination]}
                     className="mySwiper"
                     onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
+                    onAfterInit={swiperInit}
                 >
                     <SwiperSlide>
                         <section className={css.home}>
@@ -114,209 +130,92 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={`${css.about}`}>
+                        <section id={'about'} className={`${css.about}`}>
                             {/*<div className={css.breadcrumb}>*/}
                             {/*    <p>About</p>*/}
                             {/*</div>*/}
                             <div className={css.about__content}>
-                                <h2>
-                                    아름다운 여자들의 우아한 공간,<br/>
-                                    아름다운 당신이 머무는 공간,<br/>
+                                <h2 className="main_h2_tit">About</h2>
+                                <p className="about_titA"><span>On-line offline marketing</span> 창업컨설팅 전문가 집단</p>
+                                <p className="about_titB">
+                                    아름다운 여자들의 우아한 공간, 아름다운 당신이 머무는 공간,<br/>
                                     여우공간 필라테스
-                                </h2>
-                                <h1>EXPERT + PASSION + SERVICE</h1>
-                                <h2>On-line offline marketing 창업컨설팅 전문가 집단</h2>
-                                <h3>
-                                    고객에게 최고의 전문가를 제공하고 전문성 / 열정 / 서비스 정신으로 고객만족을 위해 <br/>
-                                    혼신의 힘을 다합니다. 창업을 준비하시는 대표님들의 투자를 <br/>
-                                    시장가치의 극대화하는 상생 원리를 실현합니다.
-                                </h3>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h1>
-                                    변화와 혁신에 도전하는<br/>
-                                    우리의 미래 당신의 미래가 됩니다.
-                                </h1>
-                                <h2>
-                                    Our future challenging change and innovation <br/>
-                                    becomes your future
-                                </h2>
-                                <p>
-                                    YEOUGONGGAN에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
-                                    있도록지원합니다. <br/>
-                                    온.오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수 있도록 하는 것이
-                                    최종 목표입니다.
                                 </p>
+                                <div className="about_box">
+                                    <div className="about_expert out_box">
+                                        <div className="inner_box"><span>EXPERT</span></div>
+                                    </div>
+                                    <div className="about_passion out_box">
+                                        <div className="inner_box"><span>PASSION</span></div>
+                                    </div>
+                                    <div className="about_service out_box">
+                                        <div className="inner_box"><span>SERVICE</span></div>
+                                    </div>
+                                </div>
+                                <p className="about_bottom">
+                                    고객에게 최고의 전문가를 제공하고 전문성 · 열정 · 서비스 정신으로 고객만족을 위해 혼신의 힘을 다합니다.<br/>
+                                    창업을 준비하시는 대표님들의 투자를 시장가치의 극대화하는 상생 원리를 실현합니다.
+                                </p>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section className={css.service}>
+                            <div className={css.service__content}>
+                                <h2 className="main_h2_tit">Service</h2>
+                                <div className="service_box">
+                                    <div className="service_box_left">
+                                        <p className="service_titA">
+                                            변화와 혁신에 도전하는<br/>
+                                            우리의 미래 당신의 미래가 됩니다.</p>
+                                        <p className="service_titB">
+                                            Our future challenging change and innovation becomes your future</p>
+                                    </div>
+                                    <div className="service_box_right">
+                                        <p className="service_titC">
+                                            여우공간에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
+                                            있도록지원합니다. <br/>
+                                            온·오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수
+                                            있도록 하는 것이
+                                            최종 목표입니다.
+                                        </p>
+                                    </div>
+                                </div>
+
                                 <div id="btn_group">
-                                    <button className="btn" onClick={() => handleClick(4)}>START-UP BUSINESS</button>
-                                    <button className="btn" onClick={() => handleClick(6)}>RECOVERY PROJECT</button>
-                                    <button className="btn" onClick={() => handleClick(8)}>BUSINESS PERFORMANCE</button>
-                                    <button className="btn" onClick={() => handleClick(9)}>NEW BUSINESS</button>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'startup'}
+                                    }}>
+
+                                        <button className="btn">START-UP BUSINESS</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'recovery'}
+                                    }}>
+                                        <button className="btn">RECOVERY PROJECT</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'performance'}
+                                    }}>
+                                        <button className="btn">BUSINESS PERFORMANCE</button>
+                                    </Link>
+                                    <Link href={{
+                                        pathname: '/home/service',
+                                        query: {page: 'newbusiness'}
+                                    }}>
+                                        <button className="btn">NEW BUSINESS</button>
+                                    </Link>
                                 </div>
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    START-UP BUSINESS
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/service/startup.png" alt="START-UP BUSINESS"/>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    START-UP BUSINESS
-                                </h2>
-                                <div className={css.service__content__startup__projects}>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup1.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup2.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup3.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup4.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup5.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/startup6.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    RECOVERY PROJECT
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/service/recovery.png" alt="START-UP BUSINESS"/>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    RECOVERY PROJECT
-                                </h2>
-                                <div className={css.service__content__startup__projects}>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery1.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery2.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery3.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery4.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery5.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                    <div className={css.service__content__startup__project}>
-                                        <img className={css.project__image} src="/home/images/service/recovery6.png"/>
-                                        <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    BUSINESS PERFORMANCE
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/businessperformance.png" alt="START-UP BUSINESS"/>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.service}>
-                            <div className={css.service__content}>
-                                <h2>
-                                    NEW BUSINESS
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/newbusiness.png" alt="START-UP BUSINESS"/>
-                                </div>
-                            </div>
-                        </section>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <section className={css.contact}>
+                        <section id={'contact'} className={css.contact}>
                             <div className={css.contact__content}>
+                                <h2 className="main_h2_tit">Contact</h2>
                                 <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
                                 <h2 style={{color: "black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu,
                                     Seoul, 6th floor.</h2>
