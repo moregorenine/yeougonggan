@@ -19,31 +19,6 @@ const LayoutNavbar = () => {
         }
         document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
-
-    if (process.browser) {
-        // const urlParams = new URLSearchParams(window.location.search);
-        // const page = urlParams.get('page');
-        // console.log(page);
-        // // window.history.replaceState({}, document.title, "/home");
-        //
-        // if (document.querySelector('#navbar')) {
-        //     switch (page) {
-        //         case 'about':
-        //             handleClick(2)
-        //             break;
-        //         case 'service':
-        //             handleClick(3)
-        //             break;
-        //     }
-        // }
-
-        document.querySelectorAll('.menu li a').forEach(a => {
-            a.addEventListener('click', ev => {
-                ev.preventDefault();
-            })
-        })
-    }
-
     return (
         <nav id="navbar">
             <div className="sub-header-bg"></div>
@@ -61,8 +36,8 @@ const LayoutNavbar = () => {
                 </div>
             </div>
             <div className="navigation">
-                <ul className="menu">
-                    <li><a href="#about" onClick={() => handleClick(2)}>About</a>
+                <ul className="menu__service">
+                    <li><a href="/home?page=about">About</a>
                     </li>
                     <li><a href="#service" onClick={() => handleClick(3)}>service</a>
                         <ul>
@@ -73,7 +48,7 @@ const LayoutNavbar = () => {
                             <li><a href="#new-business" onClick={() => handleClick(9)}>NEW BUSINESS</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact" onClick={() => handleClick(4)}>contact</a></li>
+                    <li><a href="/home?page=contact" onClick={() => handleClick(10)}>contact</a></li>
                 </ul>
             </div>
             <style jsx>{`
@@ -84,7 +59,7 @@ const LayoutNavbar = () => {
                 width: 100%;
                 left: 0;
                 height: 90px;
-                border-bottom: 1px solid rgba(255, 255, 255, .3);
+                border-bottom:1px solid rgba(255, 255, 255, .3);
                 background: #000000;
                 background: linear-gradient(to bottom, #0000009c, #00000000);
                 //z-index: 15
@@ -151,7 +126,7 @@ const LayoutNavbar = () => {
                 //margin-top: 40px;
                 //margin-right: 60px;
                 //float: right;
-                text-align: center;
+                text-align:center;
               }
 
               #navbar.active .navigation {
@@ -160,12 +135,12 @@ const LayoutNavbar = () => {
               #navbar ul {
                 display: inline-block;
               }
-
+              
               #navbar ul li {
                 margin-left: 60px;
                 position: relative;
               }
-
+              
               #navbar > div > ul > li > a {
                 font-size: 16px;
                 padding-bottom: 10px;
@@ -446,12 +421,12 @@ const LayoutNavbar = () => {
                   font-size: 16px;
                 }
 
-                #navbar .navigation ul.menu li {
+                #navbar .navigation ul.menu__service li {
                   display: block;
                   margin-left: 40px;
                 }
 
-                #navbar .navigation ul.menu li a {
+                #navbar .navigation ul.menu__service li a {
                   display: inline-block;
                   font-size: 45px;
                   padding-bottom: 0px;
@@ -460,7 +435,7 @@ const LayoutNavbar = () => {
                   letter-spacing: 0em;
                 }
 
-                #navbar .navigation ul.menu li ul {
+                #navbar .navigation ul.menu__service li ul {
                   padding: 0px;
                   top: 0;
                   position: relative;
@@ -471,7 +446,7 @@ const LayoutNavbar = () => {
                   text-align: left;
                 }
 
-                #navbar .navigation ul.menu li ul li {
+                #navbar .navigation ul.menu__service li ul li {
                   height: 25px;
                   border-left: 1px solid rgba(255, 255, 255, 0.2);
                   margin: 0px;
@@ -482,12 +457,12 @@ const LayoutNavbar = () => {
                   margin-bottom: 10px;
                 }
 
-                //#navbar .navigation ul.menu li ul li:first-child {
+                //#navbar .navigation ul.menu__service li ul li:first-child {
                 //  margin: 0px;
                 //  padding-left: 0px;
                 //  border: 0px;
                 //}
-                #navbar .navigation ul.menu li ul li a {
+                #navbar .navigation ul.menu__service li ul li a {
                   line-height: 25px;
                   display: inline-block;
                   font-size: 16px;
@@ -497,7 +472,7 @@ const LayoutNavbar = () => {
                   padding: 0;
                 }
 
-                #navbar .navigation ul.menu li.active ul li.active a {
+                #navbar .navigation ul.menu__service li.active ul li.active a {
                   color: #8eb5ff;
                 }
 
@@ -512,11 +487,11 @@ const LayoutNavbar = () => {
               }
 
               @media (max-width: 480px) {
-                #navbar .navigation ul.menu li {
+                #navbar .navigation ul.menu__service li {
                   margin-left: 20px;
                 }
 
-                #navbar .navigation ul.menu li ul li {
+                #navbar .navigation ul.menu__service li ul li {
                   padding: 0px 14px;
                 }
               }
