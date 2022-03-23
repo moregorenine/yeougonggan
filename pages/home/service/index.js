@@ -102,7 +102,7 @@ export default function Home() {
                     onAfterInit={swiperInit}
                 >
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__startup}>
                             <div className={css.service__content}>
                                 <h2>
                                     START-UP BUSINESS
@@ -114,7 +114,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__startup}>
                             <div className={css.service__content}>
                                 <h2>
                                     START-UP BUSINESS
@@ -167,7 +167,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__recovery}>
                             <div className={css.service__content}>
                                 <h2>
                                     RECOVERY PROJECT
@@ -179,7 +179,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__recovery}>
                             <div className={css.service__content}>
                                 <h2>
                                     RECOVERY PROJECT
@@ -232,7 +232,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__performance}>
                             <div className={css.service__content}>
                                 <h2>
                                     BUSINESS PERFORMANCE
@@ -244,7 +244,7 @@ export default function Home() {
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service}>
+                        <section className={css.service__performance}>
                             <div className={css.service__content}>
                                 <h2>
                                     NEW BUSINESS
