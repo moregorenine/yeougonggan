@@ -54,15 +54,16 @@ const LayoutNavbar = () => {
             </div>
             <style jsx>{`
               .sub-header-bg {
-                //border-top: 3px solid #8eb5ff;
+                //border-top: 3px solid #ff7f00;
                 position: fixed;
                 top: 0;
                 width: 100%;
                 left: 0;
                 height: 90px;
-                border-bottom: 1px solid rgba(255, 255, 255, .3);
+                border-bottom: 1px solid rgba(255, 255, 255, .1);
                 background: #000000;
-                background: linear-gradient(to bottom, #0000009c, #00000000);
+                opacity:0.4;
+                //background: linear-gradient(to bottom, #0000009c, #00000000);
                 //z-index: 15
               }
 
@@ -120,7 +121,7 @@ const LayoutNavbar = () => {
                 backdrop-filter: blur(10px);
                 height: 100%;
                 background: rgba(0, 0, 0, 0.85);
-                //border-top: 10px solid #8eb5ff;
+                //border-top: 10px solid #ff7f00;
               }
 
               #navbar .navigation {
@@ -145,7 +146,7 @@ const LayoutNavbar = () => {
               #navbar > div > ul > li > a {
                 font-size: 16px;
                 padding-bottom: 10px;
-                border-bottom: 1px solid rgba(255, 216, 142, 0);
+                // border-bottom: 1px solid rgba(255, 216, 142, 0);
                 margin: 7px 0;
               }
 
@@ -188,7 +189,7 @@ const LayoutNavbar = () => {
                 border-bottom-right-radius: 60px;
                 border-top-left-radius: 20px;
                 display: block;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgba(255, 127, 0, 1);
                 background-size: cover;
                 opacity: 1;
               }
@@ -201,24 +202,24 @@ const LayoutNavbar = () => {
               }
 
               #navbar div > ul > li.active > a {
-                color: #8eb5ff;
-                border-bottom: 1px solid rgba(142, 203, 255, 0.5);
+                color: #ff7f00;
+                // border-bottom: 1px solid rgba(142, 203, 255, 0.5);
               }
 
               #navbar > div > ul > li:hover > a {
-                color: #8eb5ff;
-                border-bottom: 1px solid rgba(142, 203, 255, 0.5);
+                color: #ff7f00;
+                // border-bottom: 1px solid rgba(142, 203, 255, 0.5);
               }
 
               #navbar ul li:hover ul li:hover a {
                 color: rgb(255, 229, 179);
-                border-bottom: 1px solid rgb(74, 74, 74);
+                // border-bottom: 1px solid rgb(74, 74, 74);
                 padding: 0 15px;
               }
 
               #navbar ul li.active ul li.active a {
                 color: rgb(251, 251, 251);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
               }
 
               #navbar ul.lang li {
@@ -304,11 +305,11 @@ const LayoutNavbar = () => {
               }
 
               #navbar .icon:hover i {
-                background: #8eb5ff;
+                background: #ff7f00;
               }
 
               #navbar.active .icon i {
-                background: #8eb5ff;
+                background: #ff7f00;
               }
 
               #navbar.active .icon i:nth-of-type(2) {
@@ -474,7 +475,7 @@ const LayoutNavbar = () => {
                 }
 
                 #navbar .navigation ul.menu li.active ul li.active a {
-                  color: #8eb5ff;
+                  color: #ff7f00;
                 }
 
                 .swiper-container.right_bar > .swiper-pagination > .swiper-pagination-bullet-active {
