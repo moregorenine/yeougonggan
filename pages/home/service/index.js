@@ -262,7 +262,7 @@ export default function Home() {
                                             <span className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br />- 오프라인 비지니스시스템 어플<br />- 브랜드만의 가치를 담은 스토리텔링<br />- Customer tendencies text message</span>
                                         </a>
                                     </div>
-                                    <div class="recovery_circle">
+                                    <div className="recovery_circle">
                                         <a href="#" className="recovery_circle1"><span>상권분석</span></a>
                                         <a href="#" className="recovery_circle2"><span>인테리어</span></a>
                                         <a href="#" className="recovery_circle3"><span>컨설팅<br />계약체결</span></a>
