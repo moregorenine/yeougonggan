@@ -156,43 +156,31 @@ export default function Home() {
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup1.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup2.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup3.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup4.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup5.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup6.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -275,43 +263,31 @@ export default function Home() {
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery1.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery2.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery3.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery4.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery5.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery6.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                 </div>
