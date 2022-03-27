@@ -396,11 +396,9 @@ export default function Home() {
                                 <div className="new_all">
                                     <div className="new_left">
                                         <div className="line1">
-                                            <div className="line2">
-                                                <div className="center_circle"><span>여우공간</span></div>
-                                            </div>
+                                            <div className="center_circle"><span>여우공간</span></div>
                                         </div>
-                                        <div className="line_circle_new new_right">
+                                        <div className="line_circle_new">
                                             <a href="#" className="circle1_new">
                                                 <span className="tit">APP</span>
                                             </a>
@@ -424,9 +422,9 @@ export default function Home() {
                                             </a>
                                         </div>
                                     </div>
-                                    <div className="new_contents">
+                                    <div className="new_contents new_right">
                                         <ul>
-                                            <li>APP&BUSINESS</li>
+                                            <li>APP & BUSINESS</li>
                                             <li>효율적인 광고 마케팅</li>
                                             <li>획기적인 판매 시스템 구축</li>
                                             <li>간편한 매장 운영 시스템</li>
