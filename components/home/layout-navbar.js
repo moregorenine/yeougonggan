@@ -154,6 +154,7 @@ const LayoutNavbar = () => {
 
               #navbar ul li ul {
                 position: absolute;
+                display: none;
                 padding: 20px 0px;
                 top: 40px;
                 left: 50%;
@@ -188,7 +189,7 @@ const LayoutNavbar = () => {
               }
 
               #navbar ul li.tmpactive ul,
-              #navbar > ul > li:hover ul {
+              #navbar ul li:hover ul {
                 display: block;
                 background: rgba(255, 127, 0, 1);
                 background-size: cover;
