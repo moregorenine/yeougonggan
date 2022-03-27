@@ -141,6 +141,7 @@ const LayoutNavbar = () => {
 
               #navbar ul li ul {
                 position: absolute;
+                display: none;
                 padding: 20px 0px;
                 top: 40px;
                 left: 50%;
