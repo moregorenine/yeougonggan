@@ -70,13 +70,15 @@ export default function Home() {
 
     useEffect(() => {
         document.querySelector('#btnPlay').addEventListener('click', ()=>{
-            document.querySelector('#btnPlay').classList.toggle("hidden");
-            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#btnPlay').classList.add("hidden");
+            document.querySelector('#btnPause').classList.remove("hidden");
+            console.log('play');
             document.querySelector('#video').play();
         })
         document.querySelector('#btnPause').addEventListener('click', ()=>{
-            document.querySelector('#btnPlay').classList.toggle("hidden");
-            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#btnPlay').classList.remove("hidden");
+            document.querySelector('#btnPause').classList.add("hidden");
+            console.log('pause');
             document.querySelector('#video').pause();
         })
         document.querySelector('#arrowUp').addEventListener('click', () => {
