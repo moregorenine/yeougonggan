@@ -36,7 +36,6 @@ export default function Home() {
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
 
-
     const handleClick = (nthChild) => {
         if (document.querySelector('#navbar').classList.contains("active")) {
             document.querySelector('#navbar').classList.toggle("active")
@@ -69,6 +68,22 @@ export default function Home() {
 
     const [videoUrl, setVideoUrl] = useState(null);
 
+    useEffect(() => {
+        document.querySelector('#btnPlay').addEventListener('click', ()=>{
+            document.querySelector('#btnPlay').classList.toggle("hidden");
+            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#video').play();
+        })
+        document.querySelector('#btnPause').addEventListener('click', ()=>{
+            document.querySelector('#btnPlay').classList.toggle("hidden");
+            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#video').pause();
+        })
+        document.querySelector('#arrowUp').addEventListener('click', () => {
+            handleClick(1);
+        });
+    });
+
     if (process.browser) {
 
         window.addEventListener("resize", resizeThrottler, false);
@@ -100,10 +115,6 @@ export default function Home() {
                 ]);
             }
         }
-
-        document.querySelector('#arrowUp').addEventListener('click', () => {
-            handleClick(1);
-        });
     }
 
     return (
@@ -125,8 +136,20 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`}
-                                   src={videoUrl}></video>
+                            <div className="video_bg"></div>
+                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`} src={videoUrl}></video>
+
+                            <div className="video_control control_area">
+                                <button id={"btnPlay"} type="button" className="play hidden"><span>Play</span></button>
+                                <button id={"btnPause"} type="button" className="pause"><span>Pause</span></button>
+                            </div>
+
+                            <div className="scroll_hint">
+                                <p className="scroll_tit">Scroll</p>
+                                <span className="mouse_icon"></span>
+                                <span className="arrow"></span>
+                            </div>
+
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -175,20 +198,30 @@ export default function Home() {
                                         <p className="service_titC">
                                             여우공간에서는 지점과 협업하여 허점을 보완하고 AGILE 프레임워크 활용하여 유기적 비즈니스와 매출 회복의 혁신을 추진할 수
                                             있도록지원합니다. <br/>
-                                            온·오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수
-                                            있도록 하는 것이
-                                            최종 목표입니다.
+                                            온 · 오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수
+                                            있도록 하는 것이 최종 목표입니다.
                                         </p>
+                                        <a href="#" className="more">자세히보기</a>
                                     </div>
                                 </div>
 
-                                <div id="btn_group">
+
+                                <div className="service_banner">
+                                    <ul>
+                                        <li><a href="#" title="바로가기"><p>START-UP<br />BUSINESS</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="#" title="바로가기"><p>RECOVERY<br />PROJECT</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="#" title="바로가기"><p>BUSINESS<br />PERFORMANCE</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="#" title="바로가기"><p>NEW<br />BUSINESS</p><span className="banner_btn"></span></a></li>
+                                    </ul>
+                                </div>
+
+                                {/* <div id="btn_group">
                                     <Link href={{
                                         pathname: '/home/service',
                                         query: {page: 'startup'}
                                     }}>
 
-                                        <button className="btn">START-UP BUSINESS</button>
+                                       <button className="btn">START-UP BUSINESS</button>
                                     </Link>
                                     <Link href={{
                                         pathname: '/home/service',
@@ -208,7 +241,8 @@ export default function Home() {
                                     }}>
                                         <button className="btn">NEW BUSINESS</button>
                                     </Link>
-                                </div>
+                                </div> */}
+
                             </div>
                         </section>
                     </SwiperSlide>
@@ -216,10 +250,26 @@ export default function Home() {
                         <section id={'contact'} className={css.contact}>
                             <div className={css.contact__content}>
                                 <h2 className="main_h2_tit">Contact</h2>
-                                <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
+
+                                <div className="contact_box">
+                                    <p className="tit">ADDRESS</p>
+                                    <div className="con">
+                                        <p className="kor_add">서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</p>
+                                        <p className="eng_add">16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</p>
+                                    </div>
+                                    <div className="link_box">
+                                        <ul>
+                                            <li><a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}></a></li>
+                                            <li><a href="mailto:yeougonggan@gmail.com"></a></li>
+                                            <li><a href="https://www.instagram.com/fox_space_pilates/" target={"_blank"}></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                {/* <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
                                 <h2 style={{color: "black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu,
                                     Seoul, 6th floor.</h2>
-
                                 <div className="addr_icon">
                                     <a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}>
                                         <i className="fa fa-map-marker" aria-hidden="true"></i>
@@ -230,7 +280,7 @@ export default function Home() {
                                     <a href="https://www.instagram.com/fox_space_pilates/" target={"_blank"}>
                                         <i className="fa-brands fa-instagram" aria-hidden="true"></i>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </section>
                     </SwiperSlide>
