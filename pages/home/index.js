@@ -203,47 +203,19 @@ export default function Home() {
                                             온 · 오프라인 HUMAN COMMUNITY 통해 E-BUSINESS 성공하여 HUMAN NETWORK COMMUNITY 형성을 이룰 수
                                             있도록 하는 것이 최종 목표입니다.
                                         </p>
-                                        <a href="#" className="more">자세히보기</a>
+                                        <a href="/home/service?page=startup" className="more">자세히보기</a>
                                     </div>
                                 </div>
 
 
                                 <div className="service_banner">
                                     <ul>
-                                        <li><a href="#" title="바로가기"><p>START-UP<br />BUSINESS</p><span className="banner_btn"></span></a></li>
-                                        <li><a href="#" title="바로가기"><p>RECOVERY<br />PROJECT</p><span className="banner_btn"></span></a></li>
-                                        <li><a href="#" title="바로가기"><p>BUSINESS<br />PERFORMANCE</p><span className="banner_btn"></span></a></li>
-                                        <li><a href="#" title="바로가기"><p>NEW<br />BUSINESS</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="/home/service?page=startup" title="바로가기"><p>START-UP<br />BUSINESS</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="/home/service?page=recovery" title="바로가기"><p>RECOVERY<br />PROJECT</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="/home/service?page=performance" title="바로가기"><p>BUSINESS<br />PERFORMANCE</p><span className="banner_btn"></span></a></li>
+                                        <li><a href="/home/service?page=newbusiness" title="바로가기"><p>NEW<br />BUSINESS</p><span className="banner_btn"></span></a></li>
                                     </ul>
                                 </div>
-
-                                {/* <div id="btn_group">
-                                    <Link href={{
-                                        pathname: '/home/service',
-                                        query: {page: 'startup'}
-                                    }}>
-
-                                       <button className="btn">START-UP BUSINESS</button>
-                                    </Link>
-                                    <Link href={{
-                                        pathname: '/home/service',
-                                        query: {page: 'recovery'}
-                                    }}>
-                                        <button className="btn">RECOVERY PROJECT</button>
-                                    </Link>
-                                    <Link href={{
-                                        pathname: '/home/service',
-                                        query: {page: 'performance'}
-                                    }}>
-                                        <button className="btn">BUSINESS PERFORMANCE</button>
-                                    </Link>
-                                    <Link href={{
-                                        pathname: '/home/service',
-                                        query: {page: 'newbusiness'}
-                                    }}>
-                                        <button className="btn">NEW BUSINESS</button>
-                                    </Link>
-                                </div> */}
 
                             </div>
                         </section>
