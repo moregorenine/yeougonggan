@@ -198,8 +198,14 @@ p {
 .video_control.control_area .pause {
 	background: rgba(0, 0, 0, 0.2) url('/home/images/ico_pause.png') no-repeat 50% 50%;
 }
+.video_control.control_area .pause.hidden {
+    display: none;
+}
 .video_control.control_area .play {
 	background: rgba(0, 0, 0, 0.2) url('/home/images/ico_play.png') no-repeat 60% 50%;
+}
+.video_control.control_area .play.hidden {
+    display: none;
 }
 
 /*mouse scroll*/

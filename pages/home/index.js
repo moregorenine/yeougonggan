@@ -36,7 +36,6 @@ export default function Home() {
         // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
     };
 
-
     const handleClick = (nthChild) => {
         if (document.querySelector('#navbar').classList.contains("active")) {
             document.querySelector('#navbar').classList.toggle("active")
@@ -68,6 +67,19 @@ export default function Home() {
     }
 
     const [videoUrl, setVideoUrl] = useState(null);
+
+    useEffect(() => {
+        document.querySelector('#btnPlay').addEventListener('click', ()=>{
+            document.querySelector('#btnPlay').classList.toggle("hidden");
+            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#video').play();
+        })
+        document.querySelector('#btnPause').addEventListener('click', ()=>{
+            document.querySelector('#btnPlay').classList.toggle("hidden");
+            document.querySelector('#btnPause').classList.toggle("hidden");
+            document.querySelector('#video').pause();
+        })
+    });
 
     if (process.browser) {
 
@@ -129,8 +141,8 @@ export default function Home() {
                             <video id={"video"} autoPlay loop muted className={`${css.home__video}`} src={videoUrl}></video>
 
                             <div className="video_control control_area">
-                                <button type="button" className="play"><span className="hidden">Play</span></button>
-                                <button type="button" className="pause" style={{display:"none"}}><span className="hidden">Pause</span></button>
+                                <button id={"btnPlay"} type="button" className="play hidden"><span>Play</span></button>
+                                <button id={"btnPause"} type="button" className="pause"><span>Pause</span></button>
                             </div>
 
                             <div className="scroll_hint">
