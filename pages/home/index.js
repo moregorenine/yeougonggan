@@ -79,6 +79,9 @@ export default function Home() {
             document.querySelector('#btnPause').classList.toggle("hidden");
             document.querySelector('#video').pause();
         })
+        document.querySelector('#arrowUp').addEventListener('click', () => {
+            handleClick(1);
+        });
     });
 
     if (process.browser) {
@@ -112,10 +115,6 @@ export default function Home() {
                 ]);
             }
         }
-
-        document.querySelector('#arrowUp').addEventListener('click', () => {
-            handleClick(1);
-        });
     }
 
     return (

@@ -44,7 +44,6 @@ const LayoutNavbar = () => {
             </div>
             <style jsx>{`
               .sub-header-bg {
-                //border-top: 3px solid #ff7f00;
                 position: fixed;
                 top: 0;
                 width: 100%;
@@ -53,7 +52,6 @@ const LayoutNavbar = () => {
                 border-bottom:1px solid rgba(255, 255, 255, .3);
                 background: #000000;
                 background: linear-gradient(to bottom, #0000009c, #00000000);
-                //z-index: 15
               }
 
               .navbar__logo {
