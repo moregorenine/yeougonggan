@@ -13,33 +13,14 @@ import {Mousewheel, Pagination} from "swiper";
 import st from "../../../components/home/layout-arrowup.module.css";
 
 export default function Home() {
-    // const handleOnIndexChanged = (activeIndex) => {
-    //     document.querySelector('#navbar .navigation .menu > li.active')?.classList.remove('active');
-    //     switch (activeIndex) {
-    //         case 1: //START-UP BUSINESS
-    //         case 2:
-    //             document.querySelector('#navbar .navigation .menu > li:nth-child(1)').classList.add('active');
-    //             break;
-    //         case 3: //RECOVERY PROJECT
-    //         case 4:
-    //             document.querySelector('#navbar .navigation .menu > li:nth-child(3)').classList.add('active');
-    //             break;
-    //         case 5: //BUSINESS PERFORMANCE
-    //             document.querySelector('#navbar .navigation .menu > li:nth-child(5)').classList.add('active');
-    //             break;
-    //         case 6: //NEW BUSINESS
-    //             document.querySelector('#navbar .navigation .menu > li:nth-child(6)').classList.add('active');
-    //             break;
-    //     }
-    //     const arrowUp = document.querySelector('#arrowUp');
-    //     if (activeIndex > 0) {
-    //         arrowUp.classList.add(st.visible)
-    //     } else {
-    //         arrowUp.classList.remove(st.visible)
-    //     }
-    //     // document.querySelector('.swiper-pagination-bullet:nth-child(' + nthChild + ')')?.click();
-    // };
-
+    const handleOnIndexChanged = (activeIndex) => {
+        const arrowUp = document.querySelector('#arrowUp');
+        if (activeIndex > 0) {
+            arrowUp.classList.add(st.visible)
+        } else {
+            arrowUp.classList.remove(st.visible)
+        }
+    };
 
 
     const handleClick = (nthChild) => {
@@ -98,7 +79,7 @@ export default function Home() {
                     }}
                     modules={[Mousewheel, Pagination]}
                     className="mySwiper"
-                    // onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
+                    onSlideChange={e => handleOnIndexChanged(e.activeIndex)}
                     onAfterInit={swiperInit}
                 >
                     <SwiperSlide>
@@ -109,7 +90,7 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>Start-up Business</li>
-								</ol>
+                                </ol>
                                 <div className="business_all">
                                     <div className="line1">
                                         <div className="line2">
@@ -119,37 +100,39 @@ export default function Home() {
                                     <div className="line_circle">
                                         <a href="#" className="circle1 tooltip right">
                                             <span className="tit">온라인</span>
-                                            <span className="tooltip-content">- 네이버 위치기반 검색<br />- 키워드광고<br />- 블로그 인스타 홈페이지<br />- 채널 SNS 카카오채널<br />- 브랜드 연결<br />- Human Network Community</span>
+                                            <span className="tooltip-content">- 네이버 위치기반 검색<br/>- 키워드광고<br/>- 블로그 인스타 홈페이지<br/>- 채널 SNS 카카오채널<br/>- 브랜드 연결<br/>- Human Network Community</span>
                                         </a>
                                         <a href="#" className="circle2 tooltip right">
                                             <span className="tit">회원관리</span>
-                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br />- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br/>- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
                                         </a>
                                         <a href="#" className="circle3 tooltip right">
                                             <span className="tit">데이터</span>
-                                            <span className="tooltip-content">- 수익 구조 분석<br />- 경쟁 업체 매출 마케팅 분석<br />- 회원 세분화 분류<br />- 직원 강사 정보 확립</span>
-                                        </a>                          
+                                            <span className="tooltip-content">- 수익 구조 분석<br/>- 경쟁 업체 매출 마케팅 분석<br/>- 회원 세분화 분류<br/>- 직원 강사 정보 확립</span>
+                                        </a>
                                         <a href="#" className="circle4 tooltip right">
                                             <span className="tit">운영</span>
-                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br />- 직원,강사 교육과 면접<br />- 운영시스템 분석<br />- 최적화 운영시스템 활용</span>
+                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br/>- 직원,강사 교육과 면접<br/>- 운영시스템 분석<br/>- 최적화 운영시스템 활용</span>
                                         </a>
                                         <a href="#" className="circle5 tooltip left">
                                             <span className="tit">오프라인</span>
-                                            <span className="tooltip-content">- 고객의 성향과 방향성<br />- 환경적인 요인과 관심사 통계확인<br />- 고객 리스트 세분화<br />- Business System + APP</span>
+                                            <span className="tooltip-content">- 고객의 성향과 방향성<br/>- 환경적인 요인과 관심사 통계확인<br/>- 고객 리스트 세분화<br/>- Business System + APP</span>
                                         </a>
                                         <a href="#" className="circle6 tooltip left">
                                             <span className="tit">지점관리</span>
-                                            <span className="tooltip-content">- 영업회의 월별<br />- 이벤트 브랜드<br />- 온라인 홍보물 관리<br />- 지점 영상 홍보물제작<br />- 지점 이벤트 문구 제작</span>
+                                            <span
+                                                className="tooltip-content">- 영업회의 월별<br/>- 이벤트 브랜드<br/>- 온라인 홍보물 관리<br/>- 지점 영상 홍보물제작<br/>- 지점 이벤트 문구 제작</span>
                                         </a>
                                         <a href="#" className="circle7 tooltip left">
                                             <span className="tit">마케팅</span>
-                                            <span className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br />- 오프라인 비지니스시스템 어플<br />- 브랜드만의 가치를 담은 스토리텔링<br />- Customer tendencies text message</span>
+                                            <span
+                                                className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br/>- 오프라인 비지니스시스템 어플<br/>- 브랜드만의 가치를 담은 스토리텔링<br/>- Customer tendencies text message</span>
                                         </a>
                                     </div>
                                     <div className="business_circle">
-                                        <a href="#" className="business_circle1"><span>컨설팅<br />계약체결</span></a>
-                                        <a href="#" className="business_circle2"><span>상권분석<br />상권입지<br />조건분석</span></a>
-                                        <a href="#" className="business_circle3"><span>인테리어<br />제휴업체</span></a>
+                                        <a href="#" className="business_circle1"><span>컨설팅<br/>계약체결</span></a>
+                                        <a href="#" className="business_circle2"><span>상권분석<br/>상권입지<br/>조건분석</span></a>
+                                        <a href="#" className="business_circle3"><span>인테리어<br/>제휴업체</span></a>
                                         <a href="#" className="business_circle4"><span>개점 오픈</span></a>
                                     </div>
                                 </div>
@@ -168,48 +151,36 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>Start-up Business</li>
-								</ol>
+                                </ol>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup1.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup2.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup3.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup4.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup5.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup6.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -224,48 +195,51 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>Recovery Project</li>
-								</ol>
+                                </ol>
 
                                 <div className="recovery_all">
                                     <div className="line1">
                                         <div className="line2">
-                                            <div className="center_circle"><span className="logo">여우공간</span><span className="text">RECOVERY<br />PROJECT</span></div>
+                                            <div className="center_circle"><span className="logo">여우공간</span><span
+                                                className="text">RECOVERY<br/>PROJECT</span></div>
                                         </div>
                                     </div>
                                     <div className="line_circle">
                                         <a href="#" className="circle1 tooltip right">
                                             <span className="tit">온라인</span>
-                                            <span className="tooltip-content">- 네이버 위치기반 검색<br />- 키워드광고<br />- 블로그 인스타 홈페이지<br />- 채널 SNS 카카오채널<br />- 브랜드 연결<br />- Human Network Community</span>
+                                            <span className="tooltip-content">- 네이버 위치기반 검색<br/>- 키워드광고<br/>- 블로그 인스타 홈페이지<br/>- 채널 SNS 카카오채널<br/>- 브랜드 연결<br/>- Human Network Community</span>
                                         </a>
                                         <a href="#" className="circle2 tooltip right">
                                             <span className="tit">회원관리</span>
-                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br />- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br/>- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
                                         </a>
                                         <a href="#" className="circle3 tooltip right">
                                             <span className="tit">데이터</span>
-                                            <span className="tooltip-content">- 수익 구조 분석<br />- 경쟁 업체 매출 마케팅 분석<br />- 회원 세분화 분류<br />- 직원 강사 정보 확립</span>
-                                        </a>                          
+                                            <span className="tooltip-content">- 수익 구조 분석<br/>- 경쟁 업체 매출 마케팅 분석<br/>- 회원 세분화 분류<br/>- 직원 강사 정보 확립</span>
+                                        </a>
                                         <a href="#" className="circle4 tooltip right">
                                             <span className="tit">운영</span>
-                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br />- 직원,강사 교육과 면접<br />- 운영시스템 분석<br />- 최적화 운영시스템 활용</span>
+                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br/>- 직원,강사 교육과 면접<br/>- 운영시스템 분석<br/>- 최적화 운영시스템 활용</span>
                                         </a>
                                         <a href="#" className="circle5 tooltip left">
                                             <span className="tit">오프라인</span>
-                                            <span className="tooltip-content">- 고객의 성향과 방향성<br />- 환경적인 요인과 관심사 통계확인<br />- 고객 리스트 세분화<br />- Business System + APP</span>
+                                            <span className="tooltip-content">- 고객의 성향과 방향성<br/>- 환경적인 요인과 관심사 통계확인<br/>- 고객 리스트 세분화<br/>- Business System + APP</span>
                                         </a>
                                         <a href="#" className="circle6 tooltip left">
                                             <span className="tit">지점관리</span>
-                                            <span className="tooltip-content">- 영업회의 월별<br />- 이벤트 브랜드<br />- 온라인 홍보물 관리<br />- 지점 영상 홍보물제작<br />- 지점 이벤트 문구 제작</span>
+                                            <span
+                                                className="tooltip-content">- 영업회의 월별<br/>- 이벤트 브랜드<br/>- 온라인 홍보물 관리<br/>- 지점 영상 홍보물제작<br/>- 지점 이벤트 문구 제작</span>
                                         </a>
                                         <a href="#" className="circle7 tooltip left">
                                             <span className="tit">마케팅</span>
-                                            <span className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br />- 오프라인 비지니스시스템 어플<br />- 브랜드만의 가치를 담은 스토리텔링<br />- Customer tendencies text message</span>
+                                            <span
+                                                className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br/>- 오프라인 비지니스시스템 어플<br/>- 브랜드만의 가치를 담은 스토리텔링<br/>- Customer tendencies text message</span>
                                         </a>
                                     </div>
                                     <div className="recovery_circle">
                                         <a href="#" className="recovery_circle1"><span>상권분석</span></a>
                                         <a href="#" className="recovery_circle2"><span>인테리어</span></a>
-                                        <a href="#" className="recovery_circle3"><span>컨설팅<br />계약체결</span></a>
+                                        <a href="#" className="recovery_circle3"><span>컨설팅<br/>계약체결</span></a>
                                     </div>
                                 </div>
 
@@ -284,48 +258,36 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>Recovery Project</li>
-								</ol>
+                                </ol>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery1.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery2.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery3.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery4.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery5.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery6.png"/>
                                         <div className={css.project__description}>
-                                            <h3>image1</h3>
-                                            <p>image1 description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -340,32 +302,33 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>Business Performance</li>
-								</ol>
+                                </ol>
                                 {/* <div className={css.service__content__startup__graph}>
                                     <img src="/home/images/businessperformance.png" alt="START-UP BUSINESS"/>
                                 </div> */}
                                 <div className="Performance_box">
                                     <div className="Performance_graph">
                                         <div className="tit"><p>소비자심리지수 추이<span>자료:한국은행</span></p></div>
-                                        <img src="/home/images/performance_graph.png" alt="" />
+                                        <img src="/home/images/performance_graph.png" alt=""/>
                                     </div>
                                     <div className="Performance_con">
                                         <div className="Performance_left">
-                                            <div className="tit">START-UP BUSINESS<br /><span>A 필라테스</span></div>
+                                            <div className="tit">START-UP BUSINESS<br/><span>A 필라테스</span></div>
                                             <div className="box">
                                                 <ul>
                                                     <li>그룹 수업 세분화(매장규모 80평)</li>
                                                     <li>고정 유동 인구 지역</li>
                                                     <li>아파트 주거구역 69%</li>
                                                     <li>경쟁사 2km 14곳 입점</li>
-                                                    <li>START-UP BUSINESS 2021년 10월 15일 ~ 11월 13일<br />오픈프리 세일 진행&nbsp;<span>투자비용의 48% 매출발생</span></li>
+                                                    <li>START-UP BUSINESS 2021년 10월 15일 ~ 11월 13일<br/>오픈프리 세일 진행&nbsp;
+                                                        <span>투자비용의 48% 매출발생</span></li>
                                                     <li>회원 11월 기준 199명</li>
                                                 </ul>
                                             </div>
 
                                         </div>
                                         <div className="Performance_right">
-                                            <div className="tit">RECOVERY PROJECT<br /><span>B 필라테스</span></div>
+                                            <div className="tit">RECOVERY PROJECT<br/><span>B 필라테스</span></div>
                                             <div className="box">
                                                 <ul>
                                                     <li>2021년 12월 코로나 오미크론 변이 발생</li>
@@ -380,7 +343,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                 
+
                             </div>
                         </section>
                     </SwiperSlide>
@@ -392,7 +355,7 @@ export default function Home() {
                                     <li><a href="#" className="home">홈으로가기</a></li>
                                     <li>Service</li>
                                     <li>New Business</li>
-								</ol>
+                                </ol>
                                 <div className="new_all">
                                     <div className="new_left">
                                         <div className="line1">
@@ -407,7 +370,7 @@ export default function Home() {
                                             </a>
                                             <a href="#" className="circle3_new">
                                                 <span className="tit">OFFLINE</span>
-                                            </a>                          
+                                            </a>
                                             <a href="#" className="circle4_new">
                                                 <span className="tit">SYSTEM</span>
                                             </a>
