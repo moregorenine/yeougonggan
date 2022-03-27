@@ -125,8 +125,20 @@ export default function Home() {
                 >
                     <SwiperSlide>
                         <section className={css.home}>
-                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`}
-                                   src={videoUrl}></video>
+                            <div className="video_bg"></div>
+                            <video id={"video"} autoPlay loop muted className={`${css.home__video}`} src={videoUrl}></video>
+
+                            <div className="video_control control_area">
+                                <button type="button" className="play"><span className="hidden">Play</span></button>
+                                <button type="button" className="pause" style={{display:"none"}}><span className="hidden">Pause</span></button>
+                            </div>
+
+                            <div className="scroll_hint">
+                                <p className="scroll_tit">Scroll</p>
+                                <span className="mouse_icon"></span>
+                                <span className="arrow"></span>
+                            </div>
+
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>

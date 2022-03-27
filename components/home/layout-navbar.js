@@ -72,7 +72,7 @@ const LayoutNavbar = () => {
                 font-weight: 500;
                 z-index: 20;
                 left: 45px;
-                top: 15px;
+                top:20px;
                 position: absolute;
                 display: inline-block;
                 //width: 100px;
@@ -145,6 +145,8 @@ const LayoutNavbar = () => {
 
               #navbar > div > ul > li > a {
                 font-size: 16px;
+                font-family: "Roboto";
+                font-weight:600;
                 padding-bottom: 10px;
                 // border-bottom: 1px solid rgba(255, 216, 142, 0);
                 margin: 7px 0;
@@ -166,28 +168,27 @@ const LayoutNavbar = () => {
                 cursor: pointer;
                 padding: 0px;
                 margin: 0px;
-                height: 35px;
-                line-height: 26px;
-                width: 260px;
+                height: 30px;
+                line-height: 30px;
+                width: 240px;
                 display: block;
                 text-align: center;
                 margin-bottom: 5px;
               }
 
               #navbar ul li ul li a {
-                font-weight: 200 !important;
+                font-weight: 400 !important;
+                font-family: "Roboto";
                 text-align: center;
                 letter-spacing: 0.05em;
                 text-transform: none;
                 border-bottom: 1px solid rgba(0, 0, 0, 0);
-                font-size: 15px;
+                font-size: 14px;
                 color: rgba(255, 255, 255, 0.7);
               }
 
               #navbar ul li.tmpactive ul,
               #navbar ul li:hover ul {
-                border-bottom-right-radius: 60px;
-                border-top-left-radius: 20px;
                 display: block;
                 background: rgba(255, 127, 0, 1);
                 background-size: cover;
@@ -422,7 +423,7 @@ const LayoutNavbar = () => {
                 #navbar .navigation ul.lang li a {
                   font-size: 16px;
                 }
-
+                
                 #navbar .navigation ul.menu li {
                   display: block;
                   margin-left: 40px;
