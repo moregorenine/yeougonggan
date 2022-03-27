@@ -104,21 +104,71 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.service__startup}>
                             <div className={css.service__content}>
-                                <h2>
-                                    START-UP BUSINESS
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/service/startup.png" alt="START-UP BUSINESS"/>
+                                <h3 className="sub_tit">START-UP BUSINESS</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>Start-up Business</li>
+								</ol>
+                                <div className="business_all">
+                                    <div className="line1">
+                                        <div className="line2">
+                                            <div className="center_circle"><span>여우공간</span></div>
+                                        </div>
+                                    </div>
+                                    <div className="line_circle">
+                                        <a href="#" className="circle1 tooltip right">
+                                            <span className="tit">온라인</span>
+                                            <span className="tooltip-content">- 네이버 위치기반 검색<br />- 키워드광고<br />- 블로그 인스타 홈페이지<br />- 채널 SNS 카카오채널<br />- 브랜드 연결<br />- Human Network Community</span>
+                                        </a>
+                                        <a href="#" className="circle2 tooltip right">
+                                            <span className="tit">회원관리</span>
+                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br />- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                        </a>
+                                        <a href="#" className="circle3 tooltip right">
+                                            <span className="tit">데이터</span>
+                                            <span className="tooltip-content">- 수익 구조 분석<br />- 경쟁 업체 매출 마케팅 분석<br />- 회원 세분화 분류<br />- 직원 강사 정보 확립</span>
+                                        </a>                          
+                                        <a href="#" className="circle4 tooltip right">
+                                            <span className="tit">운영</span>
+                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br />- 직원,강사 교육과 면접<br />- 운영시스템 분석<br />- 최적화 운영시스템 활용</span>
+                                        </a>
+                                        <a href="#" className="circle5 tooltip left">
+                                            <span className="tit">오프라인</span>
+                                            <span className="tooltip-content">- 고객의 성향과 방향성<br />- 환경적인 요인과 관심사 통계확인<br />- 고객 리스트 세분화<br />- Business System + APP</span>
+                                        </a>
+                                        <a href="#" className="circle6 tooltip left">
+                                            <span className="tit">지점관리</span>
+                                            <span className="tooltip-content">- 영업회의 월별<br />- 이벤트 브랜드<br />- 온라인 홍보물 관리<br />- 지점 영상 홍보물제작<br />- 지점 이벤트 문구 제작</span>
+                                        </a>
+                                        <a href="#" className="circle7 tooltip left">
+                                            <span className="tit">마케팅</span>
+                                            <span className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br />- 오프라인 비지니스시스템 어플<br />- 브랜드만의 가치를 담은 스토리텔링<br />- Customer tendencies text message</span>
+                                        </a>
+                                    </div>
+                                    <div className="business_circle">
+                                        <a href="#" className="business_circle1"><span>컨설팅<br />계약체결</span></a>
+                                        <a href="#" className="business_circle2"><span>상권분석<br />상권입지<br />조건분석</span></a>
+                                        <a href="#" className="business_circle3"><span>인테리어<br />제휴업체</span></a>
+                                        <a href="#" className="business_circle4"><span>개점 오픈</span></a>
+                                    </div>
                                 </div>
+
+                                {/* <div className={css.service__content__startup__graph}>
+                                    <img src="/home/images/service/startup.png" alt="START-UP BUSINESS"/>
+                                </div> */}
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={css.service__startup}>
                             <div className={css.service__content}>
-                                <h2>
-                                    START-UP BUSINESS
-                                </h2>
+                                <h3 className="sub_tit">START-UP BUSINESS</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>Start-up Business</li>
+								</ol>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/startup1.png"/>
@@ -169,21 +219,72 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.service__recovery}>
                             <div className={css.service__content}>
-                                <h2>
-                                    RECOVERY PROJECT
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/service/recovery.png" alt="START-UP BUSINESS"/>
+                                <h3 className="sub_tit">RECOVERY PROJECT</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>Recovery Project</li>
+								</ol>
+
+                                <div className="recovery_all">
+                                    <div className="line1">
+                                        <div className="line2">
+                                            <div className="center_circle"><span className="logo">여우공간</span><span className="text">RECOVERY<br />PROJECT</span></div>
+                                        </div>
+                                    </div>
+                                    <div className="line_circle">
+                                        <a href="#" className="circle1 tooltip right">
+                                            <span className="tit">온라인</span>
+                                            <span className="tooltip-content">- 네이버 위치기반 검색<br />- 키워드광고<br />- 블로그 인스타 홈페이지<br />- 채널 SNS 카카오채널<br />- 브랜드 연결<br />- Human Network Community</span>
+                                        </a>
+                                        <a href="#" className="circle2 tooltip right">
+                                            <span className="tit">회원관리</span>
+                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br />- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                        </a>
+                                        <a href="#" className="circle3 tooltip right">
+                                            <span className="tit">데이터</span>
+                                            <span className="tooltip-content">- 수익 구조 분석<br />- 경쟁 업체 매출 마케팅 분석<br />- 회원 세분화 분류<br />- 직원 강사 정보 확립</span>
+                                        </a>                          
+                                        <a href="#" className="circle4 tooltip right">
+                                            <span className="tit">운영</span>
+                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br />- 직원,강사 교육과 면접<br />- 운영시스템 분석<br />- 최적화 운영시스템 활용</span>
+                                        </a>
+                                        <a href="#" className="circle5 tooltip left">
+                                            <span className="tit">오프라인</span>
+                                            <span className="tooltip-content">- 고객의 성향과 방향성<br />- 환경적인 요인과 관심사 통계확인<br />- 고객 리스트 세분화<br />- Business System + APP</span>
+                                        </a>
+                                        <a href="#" className="circle6 tooltip left">
+                                            <span className="tit">지점관리</span>
+                                            <span className="tooltip-content">- 영업회의 월별<br />- 이벤트 브랜드<br />- 온라인 홍보물 관리<br />- 지점 영상 홍보물제작<br />- 지점 이벤트 문구 제작</span>
+                                        </a>
+                                        <a href="#" className="circle7 tooltip left">
+                                            <span className="tit">마케팅</span>
+                                            <span className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br />- 오프라인 비지니스시스템 어플<br />- 브랜드만의 가치를 담은 스토리텔링<br />- Customer tendencies text message</span>
+                                        </a>
+                                    </div>
+                                    <div class="recovery_circle">
+                                        <a href="#" className="recovery_circle1"><span>상권분석</span></a>
+                                        <a href="#" className="recovery_circle2"><span>인테리어</span></a>
+                                        <a href="#" className="recovery_circle3"><span>컨설팅<br />계약체결</span></a>
+                                    </div>
                                 </div>
+
+
+                                {/* <div className={css.service__content__startup__graph}>
+                                    <img src="/home/images/service/recovery.png" alt="START-UP BUSINESS"/>
+                                </div> */}
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
                         <section className={css.service__recovery}>
                             <div className={css.service__content}>
-                                <h2>
-                                    RECOVERY PROJECT
-                                </h2>
+                                <h3 className="sub_tit">RECOVERY PROJECT</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>Recovery Project</li>
+								</ol>
                                 <div className={css.service__content__startup__projects}>
                                     <div className={css.service__content__startup__project}>
                                         <img className={css.project__image} src="/home/images/service/recovery1.png"/>
@@ -234,24 +335,107 @@ export default function Home() {
                     <SwiperSlide>
                         <section className={css.service__performance}>
                             <div className={css.service__content}>
-                                <h2>
-                                    BUSINESS PERFORMANCE
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
+                                <h3 className="sub_tit">BUSINESS PERFORMANCE</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>Business Performance</li>
+								</ol>
+                                {/* <div className={css.service__content__startup__graph}>
                                     <img src="/home/images/businessperformance.png" alt="START-UP BUSINESS"/>
+                                </div> */}
+                                <div className="Performance_box">
+                                    <div className="Performance_graph">
+                                        <div className="tit"><p>소비자심리지수 추이<span>자료:한국은행</span></p></div>
+                                        <img src="/home/images/performance_graph.png" alt="" />
+                                    </div>
+                                    <div className="Performance_con">
+                                        <div className="Performance_left">
+                                            <div className="tit">START-UP BUSINESS<br /><span>A 필라테스</span></div>
+                                            <div className="box">
+                                                <ul>
+                                                    <li>그룹 수업 세분화(매장규모 80평)</li>
+                                                    <li>고정 유동 인구 지역</li>
+                                                    <li>아파트 주거구역 69%</li>
+                                                    <li>경쟁사 2km 14곳 입점</li>
+                                                    <li>START-UP BUSINESS 2021년 10월 15일 ~ 11월 13일<br />오픈프리 세일 진행&nbsp;<span>투자비용의 48% 매출발생</span></li>
+                                                    <li>회원 11월 기준 199명</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div className="Performance_right">
+                                            <div className="tit">RECOVERY PROJECT<br /><span>B 필라테스</span></div>
+                                            <div className="box">
+                                                <ul>
+                                                    <li>2021년 12월 코로나 오미크론 변이 발생</li>
+                                                    <li>2월 25일 신규 166,209 확진자 발생</li>
+                                                    <li>21년 11월 <span>21.1% 신장</span></li>
+                                                    <li>21년 12월 <span>72.5% 신장</span></li>
+                                                    <li>22년 1월 <span>46.0% 신장</span></li>
+                                                    <li>22년 2월 <span>17.0%신장</span></li>
+                                                    <li><span>신규 88%, 재등록 93% 등록</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                 
                             </div>
                         </section>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <section className={css.service__performance}>
+                        <section className={css.service__newbusiness}>
                             <div className={css.service__content}>
-                                <h2>
-                                    NEW BUSINESS
-                                </h2>
-                                <div className={css.service__content__startup__graph}>
-                                    <img src="/home/images/newbusiness.png" alt="START-UP BUSINESS"/>
+                                <h3 className="sub_tit">NEW BUSINESS</h3>
+                                <ol className="location-list">
+                                    <li><a href="#" className="home">홈으로가기</a></li>
+                                    <li>Service</li>
+                                    <li>New Business</li>
+								</ol>
+                                <div className="new_all">
+                                    <div className="new_left">
+                                        <div className="line1">
+                                            <div className="center_circle"><span>여우공간</span></div>
+                                        </div>
+                                        <div className="line_circle_new">
+                                            <a href="#" className="circle1_new">
+                                                <span className="tit">APP</span>
+                                            </a>
+                                            <a href="#" className="circle2_new">
+                                                <span className="tit">MARKETING</span>
+                                            </a>
+                                            <a href="#" className="circle3_new">
+                                                <span className="tit">OFFLINE</span>
+                                            </a>                          
+                                            <a href="#" className="circle4_new">
+                                                <span className="tit">SYSTEM</span>
+                                            </a>
+                                            <a href="#" className="circle5_new">
+                                                <span className="tit">OPERATION</span>
+                                            </a>
+                                            <a href="#" className="circle6_new">
+                                                <span className="tit">COMMERCIAL</span>
+                                            </a>
+                                            <a href="#" className="circle7_new">
+                                                <span className="tit">SALE</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="new_contents new_right">
+                                        <ul>
+                                            <li>APP & BUSINESS</li>
+                                            <li>효율적인 광고 마케팅</li>
+                                            <li>획기적인 판매 시스템 구축</li>
+                                            <li>간편한 매장 운영 시스템</li>
+                                            <li>피트니스 시설 어디든 가능한 간편함</li>
+                                            <li>인재 정보,기업 데이터 베이스 구축</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                {/* <div className={css.service__content__startup__graph}>
+                                    <img src="/home/images/newbusiness.png" alt="START-UP BUSINESS"/>
+                                </div> */}
                             </div>
                         </section>
                     </SwiperSlide>
