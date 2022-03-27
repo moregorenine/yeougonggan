@@ -44,25 +44,25 @@
 .service__startup {
     width: 100%;
     height: 100%;
-    background: center/cover no-repeat url("/home/images/service_bg.jpg");
+    background: center/cover no-repeat url("/home/images/business_bg.jpg");
 }
 
 .service__recovery {
     width: 100%;
     height: 100%;
-    background: center/cover no-repeat url("/home/images/service_bg.jpg");
+    background: center/cover no-repeat url("/home/images/project_bg.jpg");
 }
 
 .service__performance {
     width: 100%;
     height: 100%;
-    background: center/cover no-repeat url("/home/images/service_bg.jpg");
+    background: center/cover no-repeat url("/home/images/performance_bg.jpg");
 }
 
 .service__newbusiness {
     width: 100%;
     height: 100%;
-    background: center/cover no-repeat url("/home/images/service_bg.jpg");
+    background: center/cover no-repeat url("/home/images/new_bg.jpg");
 }
 
 .service__content {
@@ -80,6 +80,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    width:1080px;
+    margin: 0 auto;
 }
 
 .service__content__startup__project {
