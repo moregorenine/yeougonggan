@@ -62,7 +62,7 @@ const LayoutNavbar = () => {
                 height: 90px;
                 border-bottom: 1px solid rgba(255, 255, 255, .1);
                 background: #000000;
-                opacity: 0.4;
+                opacity:0.4;
                 //background: linear-gradient(to bottom, #0000009c, #00000000);
                 //z-index: 15
               }
@@ -72,7 +72,7 @@ const LayoutNavbar = () => {
                 font-weight: 500;
                 z-index: 20;
                 left: 45px;
-                top: 20px;
+                top:20px;
                 position: absolute;
                 display: inline-block;
                 //width: 100px;
@@ -146,7 +146,7 @@ const LayoutNavbar = () => {
               #navbar > div > ul > li > a {
                 font-size: 16px;
                 font-family: "Roboto";
-                font-weight: 600;
+                font-weight:600;
                 padding-bottom: 10px;
                 // border-bottom: 1px solid rgba(255, 216, 142, 0);
                 margin: 7px 0;
@@ -424,7 +424,7 @@ const LayoutNavbar = () => {
                 #navbar .navigation ul.lang li a {
                   font-size: 16px;
                 }
-
+                
                 #navbar .navigation ul.menu li {
                   display: block;
                   margin-left: 40px;
