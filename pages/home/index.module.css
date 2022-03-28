@@ -152,7 +152,11 @@
 }
 
 /*For below 768px screen width*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width:420px) {
+    .about__content{top:40% !important; transform: translateY(-40%);}
+    .service__content{top:40%; transform: translateY(-40%);}
+    .contact__content{top:40%; transform: translateY(-40%);}
+
 
     .service__content__startup__project {
         width: 100px;
