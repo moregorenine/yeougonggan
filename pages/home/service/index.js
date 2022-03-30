@@ -184,6 +184,9 @@ export default function Home() {
                                         <a href="#" className="business_circle4"><span>개점 오픈</span></a>
                                     </div>
                                 </div>
+                                <div className="business_all_m">
+                                    <img src="/home/images/startup_m.png" alt="graph" />
+                                </div>
 
                                 {/* <div className={css.service__content__startup__graph}>
                                     <img src="/home/images/service/startup.png" alt="START-UP BUSINESS"/>
@@ -338,6 +341,9 @@ export default function Home() {
                                         <a href="#" className="recovery_circle3"><span>컨설팅<br/>계약체결</span></a>
                                     </div>
                                 </div>
+                                <div className="recovery_all_m">
+                                    <img src="/home/images/project_m.png" alt="graph" />
+                                </div>
 
 
                                 {/* <div className={css.service__content__startup__graph}>
@@ -491,6 +497,9 @@ export default function Home() {
                                             <li>인재 정보,기업 데이터 베이스 구축</li>
                                         </ul>
                                     </div>
+                                </div>
+                                <div className="new_all_m">
+                                    <img src="/home/images/new_m.png" alt="graph" />
                                 </div>
                                 {/* <div className={css.service__content__startup__graph}>
                                     <img src="/home/images/newbusiness.png" alt="START-UP BUSINESS"/>
