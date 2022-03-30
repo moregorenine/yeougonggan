@@ -100,33 +100,81 @@ export default function Home() {
                                     <div className="line_circle">
                                         <a href="#" className="circle1 tooltip right">
                                             <span className="tit">온라인</span>
-                                            <span className="tooltip-content">- 네이버 위치기반 검색<br/>- 키워드광고<br/>- 블로그 인스타 홈페이지<br/>- 채널 SNS 카카오채널<br/>- 브랜드 연결<br/>- Human Network Community</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>네이버 위치기반 검색</li>
+                                                    <li>키워드광고</li>
+                                                    <li>블로그 인스타 홈페이지</li>
+                                                    <li>채널 SNS 카카오채널</li>
+                                                    <li>브랜드 연결</li>
+                                                    <li>Human Network Community</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle2 tooltip right">
                                             <span className="tit">회원관리</span>
-                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br/>- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>고객과 관련된 내·외부 자료 분석</li>
+                                                    <li>고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle3 tooltip right">
                                             <span className="tit">데이터</span>
-                                            <span className="tooltip-content">- 수익 구조 분석<br/>- 경쟁 업체 매출 마케팅 분석<br/>- 회원 세분화 분류<br/>- 직원 강사 정보 확립</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>수익 구조 분석</li>
+                                                    <li>경쟁 업체 매출 마케팅 분석</li>
+                                                    <li>회원 세분화 분류</li>
+                                                    <li>직원 강사 정보 확립</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle4 tooltip right">
                                             <span className="tit">운영</span>
-                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br/>- 직원,강사 교육과 면접<br/>- 운영시스템 분석<br/>- 최적화 운영시스템 활용</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>본사 지원 이벤트 활용</li>
+                                                    <li>직원,강사 교육과 면접</li>
+                                                    <li>운영시스템 분석</li>
+                                                    <li>최적화 운영시스템 활용</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle5 tooltip left">
                                             <span className="tit">오프라인</span>
-                                            <span className="tooltip-content">- 고객의 성향과 방향성<br/>- 환경적인 요인과 관심사 통계확인<br/>- 고객 리스트 세분화<br/>- Business System + APP</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>고객의 성향과 방향성</li>
+                                                    <li>환경적인 요인과 관심사 통계확인</li>
+                                                    <li>고객 리스트 세분화</li>
+                                                    <li>Business System + APP</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle6 tooltip left">
                                             <span className="tit">지점관리</span>
-                                            <span
-                                                className="tooltip-content">- 영업회의 월별<br/>- 이벤트 브랜드<br/>- 온라인 홍보물 관리<br/>- 지점 영상 홍보물제작<br/>- 지점 이벤트 문구 제작</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>영업회의 월별</li>
+                                                    <li>이벤트 브랜드</li>
+                                                    <li>온라인 홍보물 관리</li>
+                                                    <li>지점 영상 홍보물제작</li>
+                                                    <li>지점 이벤트 문구 제작</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle7 tooltip left">
                                             <span className="tit">마케팅</span>
-                                            <span
-                                                className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br/>- 오프라인 비지니스시스템 어플<br/>- 브랜드만의 가치를 담은 스토리텔링<br/>- Customer tendencies text message</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>온라인 휴먼네트워크커뮤니티</li>
+                                                    <li>오프라인 비지니스시스템 어플</li>
+                                                    <li>브랜드만의 가치를 담은 스토리텔링</li>
+                                                    <li>Customer tendencies text message</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                     </div>
                                     <div className="business_circle">
@@ -207,33 +255,81 @@ export default function Home() {
                                     <div className="line_circle">
                                         <a href="#" className="circle1 tooltip right">
                                             <span className="tit">온라인</span>
-                                            <span className="tooltip-content">- 네이버 위치기반 검색<br/>- 키워드광고<br/>- 블로그 인스타 홈페이지<br/>- 채널 SNS 카카오채널<br/>- 브랜드 연결<br/>- Human Network Community</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>네이버 위치기반 검색</li>
+                                                    <li>키워드광고</li>
+                                                    <li>블로그 인스타 홈페이지</li>
+                                                    <li>채널 SNS 카카오채널</li>
+                                                    <li>브랜드 연결</li>
+                                                    <li>Human Network Community</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle2 tooltip right">
                                             <span className="tit">회원관리</span>
-                                            <span className="tooltip-content">- 고객과 관련된 내·외부 자료 분석<br/>- 고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>고객과 관련된 내·외부 자료 분석</li>
+                                                    <li>고객 특성에 맞게 마케팅 활동을 계획. 지원 시스템</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle3 tooltip right">
                                             <span className="tit">데이터</span>
-                                            <span className="tooltip-content">- 수익 구조 분석<br/>- 경쟁 업체 매출 마케팅 분석<br/>- 회원 세분화 분류<br/>- 직원 강사 정보 확립</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>수익 구조 분석</li>
+                                                    <li>경쟁 업체 매출 마케팅 분석</li>
+                                                    <li>회원 세분화 분류</li>
+                                                    <li>직원 강사 정보 확립</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle4 tooltip right">
                                             <span className="tit">운영</span>
-                                            <span className="tooltip-content">- 본사 지원 이벤트 활용<br/>- 직원,강사 교육과 면접<br/>- 운영시스템 분석<br/>- 최적화 운영시스템 활용</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>본사 지원 이벤트 활용</li>
+                                                    <li>직원,강사 교육과 면접</li>
+                                                    <li>운영시스템 분석</li>
+                                                    <li>최적화 운영시스템 활용</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle5 tooltip left">
                                             <span className="tit">오프라인</span>
-                                            <span className="tooltip-content">- 고객의 성향과 방향성<br/>- 환경적인 요인과 관심사 통계확인<br/>- 고객 리스트 세분화<br/>- Business System + APP</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>고객의 성향과 방향성</li>
+                                                    <li>환경적인 요인과 관심사 통계확인</li>
+                                                    <li>고객 리스트 세분화</li>
+                                                    <li>Business System + APP</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle6 tooltip left">
                                             <span className="tit">지점관리</span>
-                                            <span
-                                                className="tooltip-content">- 영업회의 월별<br/>- 이벤트 브랜드<br/>- 온라인 홍보물 관리<br/>- 지점 영상 홍보물제작<br/>- 지점 이벤트 문구 제작</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>영업회의 월별</li>
+                                                    <li>이벤트 브랜드</li>
+                                                    <li>온라인 홍보물 관리</li>
+                                                    <li>지점 영상 홍보물제작</li>
+                                                    <li>지점 이벤트 문구 제작</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                         <a href="#" className="circle7 tooltip left">
                                             <span className="tit">마케팅</span>
-                                            <span
-                                                className="tooltip-content">- 온라인 휴먼네트워크커뮤니티<br/>- 오프라인 비지니스시스템 어플<br/>- 브랜드만의 가치를 담은 스토리텔링<br/>- Customer tendencies text message</span>
+                                            <span className="tooltip-content">
+                                                <ul className="tool">
+                                                    <li>온라인 휴먼네트워크커뮤니티</li>
+                                                    <li>오프라인 비지니스시스템 어플</li>
+                                                    <li>브랜드만의 가치를 담은 스토리텔링</li>
+                                                    <li>Customer tendencies text message</li>
+                                                </ul>
+                                            </span>
                                         </a>
                                     </div>
                                     <div className="recovery_circle">
@@ -309,7 +405,7 @@ export default function Home() {
                                 <div className="Performance_box">
                                     <div className="Performance_graph">
                                         <div className="tit"><p>소비자심리지수 추이<span>자료:한국은행</span></p></div>
-                                        <img src="/home/images/performance_graph.png" alt=""/>
+                                        <div className="img"><img src="/home/images/performance_graph.png" alt=""/></div>
                                     </div>
                                     <div className="Performance_con">
                                         <div className="Performance_left">

@@ -489,15 +489,34 @@ const LayoutNavbar = () => {
                 }
 
               }
-
-              @media (max-width: 480px) {
+              @media (max-width:768px) {
+                #navbar .navigation ul.menu{display:block;}
                 #navbar .navigation ul.menu li {
-                  margin-left: 20px;
+                  margin-left:60px;
+                  text-align:left;
                 }
-
+                #navbar .navigation ul.menu li a{font-size:40px; margin:15px 0;}
                 #navbar .navigation ul.menu li ul li {
                   padding: 0px 14px;
+                  border-left:0 !important; position:relative; display:block;
                 }
+                #navbar .navigation ul.menu li ul li a {margin:7px 0;}
+                #navbar .navigation ul.menu li ul li::after{left:0; top:6px; position:absolute; content:''; display:block; width:1px; height:25px; background-color:rgba(255,255,255,0.2);}
+              }
+
+              @media (max-width: 480px) {
+                #navbar .navigation ul.menu{display:block;}
+                #navbar .navigation ul.menu li {
+                  margin-left:40px;
+                  text-align:left;
+                }
+                #navbar .navigation ul.menu a{font-size:40px;}
+                #navbar .navigation ul.menu li ul li {
+                  padding: 0px 14px;
+                  border-left:0 !important; position:relative; display:block;
+                }
+                #navbar .navigation ul.menu li ul li::after{left:0; top:6px; position:absolute; content:''; display:block; width:1px; height:25px; background-color:rgba(255,255,255,0.2);}
+
               }
 
             `}</style>
