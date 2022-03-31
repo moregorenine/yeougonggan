@@ -757,12 +757,6 @@ max-width:500px; min-width:300px; padding: 12px; position: absolute; opacity: 0;
     .Performance_graph .tit p{font-size:13px; padding-left:12px;}
     .Performance_graph .img{width:300px; }
     
-
-}
-
-
-@media screen and (max-width:380px) {
-
     .business_all, .business_all_t {display: none; }
     .business_all_m{display: block; width:319px;margin:15px auto 0;}
     .business_all_m img{width:100%;}
@@ -774,4 +768,7 @@ max-width:500px; min-width:300px; padding: 12px; position: absolute; opacity: 0;
     .new_all, .new_all_t{display: none; }
     .new_all_m{display: block; width:289px;margin:15px auto 0;}
     .new_all_m img{width:100%;}
+
 }
+
+
