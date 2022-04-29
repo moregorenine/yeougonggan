@@ -241,7 +241,7 @@ export default function Home() {
                                 </div>
 
 
-                                {/* <h2 style={{color: "black"}}>서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</h2>
+                                {/* <h2 style={{color: "black"}}>경기도 남양주시 다산중앙로123번길 22-18 다산중앙하이츠</h2>
                                 <h2 style={{color: "black"}}>16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu,
                                     Seoul, 6th floor.</h2>
                                 <div className="addr_icon">
