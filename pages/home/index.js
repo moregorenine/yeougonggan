@@ -229,11 +229,11 @@ export default function Home() {
                                     <p className="tit">ADDRESS</p>
                                     <div className="con">
                                         <p className="kor_add">경기도 남양주시 다산중앙로123번길 22-18 다산중앙하이츠</p>
-                                        <p className="eng_add">16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</p>
+                                        <p className="eng_add">22-18, Dasanjungang-ro 123beon-gil, Namyangju-si, Gyeonggi-do, Republic of Korea</p>
                                     </div>
                                     <div className="link_box">
                                         <ul>
-                                            <li><a href="https://goo.gl/maps/ThcE8NQDv8RPYFrP6" target={"_blank"}></a></li>
+                                            <li><a href="https://map.naver.com/v5/entry/place/1504379809?c=14153991.1819070,4526515.6723373,15,0,0,0,dh" target={"_blank"}></a></li>
                                             <li><a href="mailto:yeougonggan@gmail.com"></a></li>
                                             <li><a href="https://www.instagram.com/fox_space_pilates/" target={"_blank"}></a></li>
                                         </ul>
