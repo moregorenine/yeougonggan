@@ -228,7 +228,7 @@ export default function Home() {
                                 <div className="contact_box">
                                     <p className="tit">ADDRESS</p>
                                     <div className="con">
-                                        <p className="kor_add">서울 동작구 보라매로5가길 16 보라매 아카데미 타워 6층</p>
+                                        <p className="kor_add">경기도 남양주시 다산중앙로123번길 22-18 다산중앙하이츠</p>
                                         <p className="eng_add">16 Boramae Academy Tower, Boramae 5-ga-gil, Dongjak-gu, Seoul, 6th floor.</p>
                                     </div>
                                     <div className="link_box">
